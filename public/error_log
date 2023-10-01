@@ -1,0 +1,45 @@
+[26-Sep-2023 18:36:15 UTC] PHP Fatal error:  Uncaught TypeError: TMDB::_call(): Return value must be of type array, int returned in /home2/noviherl/nvireview.com/library/tmdb.class.php:106
+Stack trace:
+#0 /home2/noviherl/nvireview.com/library/tmdb.class.php(147): TMDB->_call()
+#1 /home2/noviherl/nvireview.com/application/api/tmdb.api.php(56): TMDB->getOnTheAirTVShows()
+#2 /home2/noviherl/nvireview.com/application/controllers/HomeController.php(22): TmdbApi->getDataTv()
+#3 /home2/noviherl/nvireview.com/public/index.php(60): HomeController->index()
+#4 /home2/noviherl/nvireview.com/public/index.php(66): callHook()
+#5 {main}
+  thrown in /home2/noviherl/nvireview.com/library/tmdb.class.php on line 106
+[27-Sep-2023 12:02:37 UTC] PHP Fatal error:  Uncaught TypeError: TMDB::_call(): Return value must be of type array, int returned in /home2/noviherl/nvireview.com/library/tmdb.class.php:106
+Stack trace:
+#0 /home2/noviherl/nvireview.com/library/tmdb.class.php(125): TMDB->_call()
+#1 /home2/noviherl/nvireview.com/application/api/tmdb.api.php(23): TMDB->getUpcomingMovies()
+#2 /home2/noviherl/nvireview.com/application/controllers/HomeController.php(18): TmdbApi->getDataMovies()
+#3 /home2/noviherl/nvireview.com/public/index.php(60): HomeController->index()
+#4 /home2/noviherl/nvireview.com/public/index.php(66): callHook()
+#5 {main}
+  thrown in /home2/noviherl/nvireview.com/library/tmdb.class.php on line 106
+[27-Sep-2023 12:05:04 UTC] PHP Fatal error:  Uncaught TypeError: TMDB::_call(): Return value must be of type array, int returned in /home2/noviherl/nvireview.com/library/tmdb.class.php:106
+Stack trace:
+#0 /home2/noviherl/nvireview.com/library/tmdb.class.php(121): TMDB->_call()
+#1 /home2/noviherl/nvireview.com/application/api/tmdb.api.php(23): TMDB->getTopRatedMovies()
+#2 /home2/noviherl/nvireview.com/application/controllers/HomeController.php(19): TmdbApi->getDataMovies()
+#3 /home2/noviherl/nvireview.com/public/index.php(60): HomeController->index()
+#4 /home2/noviherl/nvireview.com/public/index.php(66): callHook()
+#5 {main}
+  thrown in /home2/noviherl/nvireview.com/library/tmdb.class.php on line 106
+[27-Sep-2023 19:03:36 UTC] PHP Fatal error:  Uncaught TypeError: TMDB::_call(): Return value must be of type array, int returned in /home2/noviherl/nvireview.com/library/tmdb.class.php:106
+Stack trace:
+#0 /home2/noviherl/nvireview.com/library/tmdb.class.php(121): TMDB->_call()
+#1 /home2/noviherl/nvireview.com/application/api/tmdb.api.php(23): TMDB->getTopRatedMovies()
+#2 /home2/noviherl/nvireview.com/application/controllers/HomeController.php(19): TmdbApi->getDataMovies()
+#3 /home2/noviherl/nvireview.com/public/index.php(60): HomeController->index()
+#4 /home2/noviherl/nvireview.com/public/index.php(66): callHook()
+#5 {main}
+  thrown in /home2/noviherl/nvireview.com/library/tmdb.class.php on line 106
+[28-Sep-2023 08:23:54 UTC] PHP Fatal error:  Uncaught TypeError: TMDB::_call(): Return value must be of type array, int returned in /home2/noviherl/nvireview.com/library/tmdb.class.php:106
+Stack trace:
+#0 /home2/noviherl/nvireview.com/library/tmdb.class.php(111): TMDB->_call()
+#1 /home2/noviherl/nvireview.com/application/api/tmdb.api.php(23): TMDB->getPopularMovies()
+#2 /home2/noviherl/nvireview.com/application/controllers/HomeController.php(16): TmdbApi->getDataMovies()
+#3 /home2/noviherl/nvireview.com/public/index.php(60): HomeController->index()
+#4 /home2/noviherl/nvireview.com/public/index.php(66): callHook()
+#5 {main}
+  thrown in /home2/noviherl/nvireview.com/library/tmdb.class.php on line 106
