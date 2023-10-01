@@ -205,8 +205,8 @@
             </div>
         </div>
     </footer>
-    <?php echo histats_code() ?>
-    <script>document.write(atob("PHNjcmlwdCB0eXBlPSd0ZXh0L2phdmFzY3JpcHQnIHNyYz0nLy9wbDIwNjA2NDA0LmhpZ2hjcG1yZXZlbnVlZ2F0ZS5jb20vYzUvZTQvOTMvYzVlNDkzY2JlMTlmN2QyYzQ2MWI2NmQ1MWE1MWIxODUuanMnPjwvc2NyaXB0Pg=="));</script>
+    <!-- <?php echo histats_code() ?> -->
+    <!-- <script>document.write(atob("PHNjcmlwdCB0eXBlPSd0ZXh0L2phdmFzY3JpcHQnIHNyYz0nLy9wbDIwNjA2NDA0LmhpZ2hjcG1yZXZlbnVlZ2F0ZS5jb20vYzUvZTQvOTMvYzVlNDkzY2JlMTlmN2QyYzQ2MWI2NmQ1MWE1MWIxODUuanMnPjwvc2NyaXB0Pg=="));</script> -->
 </body>
 
 </html>

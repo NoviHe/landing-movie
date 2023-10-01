@@ -11,12 +11,12 @@ function load_script($path)
 
 function url_movie($id, $title)
 {
-    return URL_WEBSITE . '/movie/watch/' . $id . '/' . permalink($title);
+    return URL_WEBSITE . '/movie/watch/' . $id . '/' . permalink($title) . URL_END;
 }
 
 function url_tv($id, $title)
 {
-    return URL_WEBSITE . '/tv/watch/' . $id . '/' . permalink($title);
+    return URL_WEBSITE . '/tv/watch/' . $id . '/' . permalink($title) . URL_END;
 }
 
 function url_cat($id, $query)
@@ -164,4 +164,12 @@ function histats_code()
     $histats .= "<noscript><a href='/' target='_blank'><img  src='//sstatic1.histats.com/0.gif?" . HISTATS_ID . "&101' alt='' border='0'></a></noscript>";
     return $histats;
     // <!-- Histats.com  END  -->`;
+}
+
+function cache_expire($file, $expire = 86400)
+{
+    $range    = strtotime(date('Y-m-d G:i:s')) - filemtime($file);
+    if ($range >= $expire) {
+        return true;
+    }
 }

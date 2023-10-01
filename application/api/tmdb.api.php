@@ -15,11 +15,12 @@ class TmdbApi extends TMDB
 
     public function getDataMovies($getFromClass = 'getPopularMovies', $nama = 'home_m_', $page = 1)
     {
-        $path = BASE_PATH . '/cache/home/';
+        $path = DOCUMENT_ROOT . '/cache/home/';
         $name = $nama . $page . '.json';
-        // if (file_exists($path.$name) && ) {
-        //     # code...
-        // }
+
+        if (file_exists($path . $name) && !cache_expire($path . $name)) {
+            return file_get_contents($path . $name);
+        }
         $movie = $this->$getFromClass($page);
         if ($movie['results']) {
             $results = array();
@@ -38,6 +39,7 @@ class TmdbApi extends TMDB
                 $results['result'][] = $item;
             }
             $results['total_results'][] = $movie['total_results'];
+
             if (CACHE) :
                 file_put_contents($path . $name, serialize($results));
             endif;
@@ -48,11 +50,11 @@ class TmdbApi extends TMDB
 
     public function getDataTv($getFromClass = 'getPopularTVShows', $nama = 'home_tv_', $page = 1)
     {
-        $path = BASE_PATH . '/cache/home/';
+        $path = DOCUMENT_ROOT . '/cache/home/';
         $name = $nama . $page . '.json';
-        // if (file_exists($path.$name) && ) {
-        //     # code...
-        // }
+        if (file_exists($path . $name) && !cache_expire($path . $name)) {
+            return file_get_contents($path . $name);
+        }
         $tv = $this->$getFromClass($page);
         if ($tv['results']) {
             $results = array();
@@ -81,10 +83,14 @@ class TmdbApi extends TMDB
 
     public function getDataMovie($id)
     {
-        $path = BASE_PATH . '/cache/movie/';
+        $path = DOCUMENT_ROOT . '/cache/movie/';
         $name = $id . '.json';
-
-        $row = $this->getMovie($id);
+        if (file_exists($path . $name) && !cache_expire($path . $name)) :
+            $data = file_get_contents($path . $name);
+            $row = unserialize($data);
+        else :
+            $row = $this->getMovie($id);
+        endif;
 
         $title = $row['title'];
         $cm = [
@@ -180,6 +186,17 @@ class TmdbApi extends TMDB
             $companies = implode(", ", $production);
         }
 
+        if (CACHE) :
+            if (!file_exists($path)) {
+                mkdir($path, 0755, true);
+                file_put_contents($path . $name, serialize($row));
+                file_put_contents(DOCUMENT_ROOT . '/cache/single/' . $name, serialize($cm));
+            } else {
+                file_put_contents($path . $name, serialize($row));
+                file_put_contents(DOCUMENT_ROOT . '/cache/single/' . $name, serialize($cm));
+            }
+        endif;
+
         $return = [
             'row' => $row,
             'images' => $images,
@@ -206,8 +223,9 @@ class TmdbApi extends TMDB
 
     public function getDataTvShow($idTv)
     {
-        // $path = BASE_PATH . '/cache/tv/';
-        // $name = $idTv . '.json';
+        $path = DOCUMENT_ROOT . '/cache/tv/';
+        $name = $idTv . '.json';
+
         $row = array();
         $row2 = array();
         $row3 = array();
@@ -419,11 +437,11 @@ class TmdbApi extends TMDB
 
     public function getDataGenre($id, $getFromClass, $nama = 'home_genre', $page = 1)
     {
-        $path = BASE_PATH . '/cache/genre/';
+        $path = DOCUMENT_ROOT . '/cache/genre/';
         $name = $nama . $page . '.json';
-        // if (file_exists($path.$name) && ) {
-        //     # code...
-        // }
+        if (file_exists($path . $name) && !cache_expire($path . $name)) {
+            return file_get_contents($path . $name);
+        }
         $genre = $this->$getFromClass($id, $page);
         if ($genre['results']) {
             $results = array();

@@ -1,5 +1,10 @@
 <ifModule mod_rewrite.c>
     RewriteEngine On
+
+    RewriteRule ^sitemap\.xml$ index.php?url=sitemap [L]
+    RewriteRule ^sitemap$ index.php?url=sitemap [L]
+    RewriteRule ^sitemap-post\.xml$ index.php?url=sitemap/post [L]
+    RewriteRule ^sitemap-post$ index.php?url=sitemap/post [L]
     
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
