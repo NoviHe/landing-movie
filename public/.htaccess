@@ -5,7 +5,18 @@
     RewriteRule ^sitemap$ index.php?url=sitemap [L]
     RewriteRule ^sitemap-post\.xml$ index.php?url=sitemap/post [L]
     RewriteRule ^sitemap-post$ index.php?url=sitemap/post [L]
-    
+    RewriteRule ^sitemap-0\.xml$ index.php?url=sitemap/search [L]
+    RewriteRule ^sitemap-0$ index.php?url=sitemap/search [L]
+
+    RewriteRule ^dmca-notice\.html$ index.php?url=home/dmca_notice [L]
+    RewriteRule ^dmca-notice$ index.php?url=home/dmca_notice [L]
+
+    RewriteRule ^privacy-policy\.html$ index.php?url=home/privacy_policy [L]
+    RewriteRule ^privacy-policy$ index.php?url=home/privacy_policy [L]
+
+    RewriteRule ^contact-us\.html$ index.php?url=home/contact_us [L]
+    RewriteRule ^contact-us$ index.php?url=home/contact_us [L]
+
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
 

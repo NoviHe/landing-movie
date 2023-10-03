@@ -21,7 +21,12 @@ function url_tv($id, $title)
 
 function url_cat($id, $query)
 {
-    return BASE_PATH . '/home/genre/' .  $id . '/' . $query;
+    return URL_WEBSITE . '/home/genre/' .  $id . '/' . $query;
+}
+
+function url_search($query)
+{
+    return URL_WEBSITE . '/search?s=' . permalink($query);
 }
 
 function permalink($str, $options = array())

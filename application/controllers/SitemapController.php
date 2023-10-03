@@ -46,4 +46,48 @@ class SitemapController extends MainController
         $view = $this->view('sitemap/sitemap-post');
         $view->bind('recent_post', $recent_post);
     }
+
+    function search()
+    {
+        $limit = 500;
+        // $pos = '1';
+        // $sep = PHP_EOL;
+        $pos = '0';
+        $sep = ",";
+        $word_path = DOCUMENT_ROOT . '/keyword/';
+        if (!file_exists($word_path)) :
+            mkdir($word_path, 0755, true);
+        endif;
+
+        if (file_exists($word_path . 'items' . $pos . '.txt')) :
+            $handle = file_get_contents($word_path . 'items' . $pos . '.txt');
+        else :
+            $handle = '';
+        endif;
+
+        if ($handle) :
+            $result = explode($sep, $handle);
+            $res = array_slice($result, -$limit, $limit, true);
+            if ($res != '') :
+                shuffle($res);
+                foreach ($res as $hasil) :
+                    if ($hasil != '') :
+                        $a['title'] = $hasil;
+                        $output = $a;
+                    endif;
+                endforeach;
+            endif;
+        endif;
+
+        if ($output != '') :
+            $title = $output;
+        else :
+            $a['title'] = 'hello world';
+            $output[] = $a;
+            $title = $output;
+        endif;
+
+        $view = $this->view('sitemap/sitemap-0');
+        $view->bind('recent_post', $title);
+    }
 }

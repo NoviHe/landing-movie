@@ -10,6 +10,76 @@ echo '<?xml version="1.0" encoding="utf-8"?>';
         <priority>1.0</priority>
     </url>
 
+    <url>
+        <loc>https://<?= SITES_URL ?>/movie/popular</loc>
+        <lastmod><?= date('Y-m-d', strtotime(date("r"))); ?></lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://<?= SITES_URL ?>/movie/now_playing</loc>
+        <lastmod><?= date('Y-m-d', strtotime(date("r"))); ?></lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://<?= SITES_URL ?>/movie/top_rated</loc>
+        <lastmod><?= date('Y-m-d', strtotime(date("r"))); ?></lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://<?= SITES_URL ?>/movie/up_coming</loc>
+        <lastmod><?= date('Y-m-d', strtotime(date("r"))); ?></lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://<?= SITES_URL ?>/tv/airing_today</loc>
+        <lastmod><?= date('Y-m-d', strtotime(date("r"))); ?></lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+
+    <url>
+        <loc>https://<?= SITES_URL ?>/tv/popular</loc>
+        <lastmod><?= date('Y-m-d', strtotime(date("r"))); ?></lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+
+    <url>
+        <loc>https://<?= SITES_URL ?>/tv/on_the_air</loc>
+        <lastmod><?= date('Y-m-d', strtotime(date("r"))); ?></lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://<?= SITES_URL ?>/dmca-notice.html</loc>
+        <lastmod><?= date('Y-m-d', strtotime(date("r"))); ?></lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://<?= SITES_URL ?>/privacy-policy.html</loc>
+        <lastmod><?= date('Y-m-d', strtotime(date("r"))); ?></lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://<?= SITES_URL ?>/contact-us.html</loc>
+        <lastmod><?= date('Y-m-d', strtotime(date("r"))); ?></lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+
     <?php
     $hostname = SITES_URL;
     if ($handle = opendir(dirname(__DIR__, 1) . '/sitemap/')) :
