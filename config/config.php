@@ -1,5 +1,5 @@
 <?php
-define('DEVELOPMENT_ENVIRONMENT', true);
+define('DEVELOPMENT_ENVIRONMENT', false);
 // define('BASE_PATH', 'http://localhost/landing-novi2');
 // define('URL_WEBSITE', 'http://landing-novi2.test');
 define('BASE_PATH', 'https://nvireview.com');
