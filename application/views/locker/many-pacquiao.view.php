@@ -92,7 +92,9 @@
         };
     </script>
     <script src="https://d368ol0wkasvru.cloudfront.net/d602204.js"></script>
-    <?php echo histats_code() ?>
+    <?php
+    // echo histats_code()
+    ?>
 </body>
 
 </html>

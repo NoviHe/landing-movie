@@ -29,7 +29,7 @@ function setReporting()
     if (DEVELOPMENT_ENVIRONMENT == true) {
         error_reporting(E_ALL);
         ini_set('display_errors', 'On');
-        ini_set('error_log', ROOT . '/tmp/log/error.log');
+        // ini_set('error_log', ROOT . '/tmp/log/error.log');
     } else {
         error_reporting(E_ALL);
         ini_set('display_errors', 'Off');

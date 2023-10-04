@@ -1,0 +1,63 @@
+[04-Oct-2023 15:14:49 UTC] PHP Fatal error:  Uncaught Error: Class 'DashboardController' not found in C:\laragon\www\landing-novi2\application\controllers\AdminController.php:12
+Stack trace:
+#0 C:\laragon\www\landing-novi2\application\controllers\AdminController.php(25): AdminController->getController('dashboard')
+#1 C:\laragon\www\landing-novi2\public\index.php(61): AdminController->index()
+#2 C:\laragon\www\landing-novi2\public\index.php(68): callHook()
+#3 {main}
+  thrown in C:\laragon\www\landing-novi2\application\controllers\AdminController.php on line 12
+[04-Oct-2023 15:15:00 UTC] PHP Fatal error:  Uncaught Error: Class 'DashboardController' not found in C:\laragon\www\landing-novi2\application\controllers\AdminController.php:12
+Stack trace:
+#0 C:\laragon\www\landing-novi2\application\controllers\AdminController.php(25): AdminController->getController('dashboard')
+#1 C:\laragon\www\landing-novi2\public\index.php(61): AdminController->index()
+#2 C:\laragon\www\landing-novi2\public\index.php(68): callHook()
+#3 {main}
+  thrown in C:\laragon\www\landing-novi2\application\controllers\AdminController.php on line 12
+[04-Oct-2023 15:15:44 UTC] PHP Fatal error:  Uncaught Error: Class 'DashboardController' not found in C:\laragon\www\landing-novi2\application\controllers\AdminController.php:12
+Stack trace:
+#0 C:\laragon\www\landing-novi2\application\controllers\AdminController.php(25): AdminController->getController('dashboard')
+#1 C:\laragon\www\landing-novi2\public\index.php(61): AdminController->index()
+#2 C:\laragon\www\landing-novi2\public\index.php(68): callHook()
+#3 {main}
+  thrown in C:\laragon\www\landing-novi2\application\controllers\AdminController.php on line 12
+[04-Oct-2023 15:15:46 UTC] PHP Fatal error:  Uncaught Error: Class 'DashboardController' not found in C:\laragon\www\landing-novi2\application\controllers\AdminController.php:12
+Stack trace:
+#0 C:\laragon\www\landing-novi2\application\controllers\AdminController.php(25): AdminController->getController('dashboard')
+#1 C:\laragon\www\landing-novi2\public\index.php(61): AdminController->index()
+#2 C:\laragon\www\landing-novi2\public\index.php(68): callHook()
+#3 {main}
+  thrown in C:\laragon\www\landing-novi2\application\controllers\AdminController.php on line 12
+[04-Oct-2023 15:16:11 UTC] PHP Fatal error:  Uncaught Error: Class 'DashboardController' not found in C:\laragon\www\landing-novi2\application\controllers\AdminController.php:12
+Stack trace:
+#0 C:\laragon\www\landing-novi2\application\controllers\AdminController.php(25): AdminController->getController('dashboard')
+#1 C:\laragon\www\landing-novi2\public\index.php(61): AdminController->index()
+#2 C:\laragon\www\landing-novi2\public\index.php(68): callHook()
+#3 {main}
+  thrown in C:\laragon\www\landing-novi2\application\controllers\AdminController.php on line 12
+[04-Oct-2023 15:16:15 UTC] PHP Fatal error:  Uncaught Error: Class 'DashboardController' not found in C:\laragon\www\landing-novi2\application\controllers\AdminController.php:12
+Stack trace:
+#0 C:\laragon\www\landing-novi2\application\controllers\AdminController.php(25): AdminController->getController('dashboard')
+#1 C:\laragon\www\landing-novi2\public\index.php(61): AdminController->index()
+#2 C:\laragon\www\landing-novi2\public\index.php(68): callHook()
+#3 {main}
+  thrown in C:\laragon\www\landing-novi2\application\controllers\AdminController.php on line 12
+[04-Oct-2023 15:16:17 UTC] PHP Fatal error:  Uncaught Error: Class 'DashboardController' not found in C:\laragon\www\landing-novi2\application\controllers\AdminController.php:12
+Stack trace:
+#0 C:\laragon\www\landing-novi2\application\controllers\AdminController.php(25): AdminController->getController('dashboard')
+#1 C:\laragon\www\landing-novi2\public\index.php(61): AdminController->index()
+#2 C:\laragon\www\landing-novi2\public\index.php(68): callHook()
+#3 {main}
+  thrown in C:\laragon\www\landing-novi2\application\controllers\AdminController.php on line 12
+[04-Oct-2023 15:16:18 UTC] PHP Fatal error:  Uncaught Error: Class 'DashboardController' not found in C:\laragon\www\landing-novi2\application\controllers\AdminController.php:12
+Stack trace:
+#0 C:\laragon\www\landing-novi2\application\controllers\AdminController.php(25): AdminController->getController('dashboard')
+#1 C:\laragon\www\landing-novi2\public\index.php(61): AdminController->index()
+#2 C:\laragon\www\landing-novi2\public\index.php(68): callHook()
+#3 {main}
+  thrown in C:\laragon\www\landing-novi2\application\controllers\AdminController.php on line 12
+[04-Oct-2023 15:16:18 UTC] PHP Fatal error:  Uncaught Error: Class 'DashboardController' not found in C:\laragon\www\landing-novi2\application\controllers\AdminController.php:12
+Stack trace:
+#0 C:\laragon\www\landing-novi2\application\controllers\AdminController.php(25): AdminController->getController('dashboard')
+#1 C:\laragon\www\landing-novi2\public\index.php(61): AdminController->index()
+#2 C:\laragon\www\landing-novi2\public\index.php(68): callHook()
+#3 {main}
+  thrown in C:\laragon\www\landing-novi2\application\controllers\AdminController.php on line 12
