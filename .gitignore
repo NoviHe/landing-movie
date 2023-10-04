@@ -4,3 +4,4 @@
 /public/cache/search/*.json
 /public/cache/sigle/*.json
 /public/cache/tv/*.json
+/public/error_log
