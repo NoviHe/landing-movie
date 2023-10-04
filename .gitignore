@@ -5,3 +5,12 @@
 /public/cache/sigle/*.json
 /public/cache/tv/*.json
 /public/error_log
+
+
+/cache/genre/*.json
+/cache/home/*.json
+/cache/movie/*.json
+/cache/search/*.json
+/cache/sigle/*.json
+/cache/tv/*.json
+/error_log
