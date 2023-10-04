@@ -193,6 +193,9 @@ class TmdbApi extends TMDB
         }
 
         if (CACHE) :
+            if (!file_exists(DOCUMENT_ROOT . '/cache/single/')) {
+                mkdir(DOCUMENT_ROOT . '/cache/single/', 0755, true);
+            }
             if (!file_exists($path)) {
                 mkdir($path, 0755, true);
                 file_put_contents($path . $name, serialize($row));
