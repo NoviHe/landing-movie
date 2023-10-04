@@ -41,6 +41,9 @@ class TmdbApi extends TMDB
             $results['total_results'][] = $movie['total_results'];
 
             if (CACHE) :
+                if (!file_exists($path)) {
+                    mkdir($path, 0755, true);
+                }
                 file_put_contents($path . $name, serialize($results));
             endif;
             return serialize($results);
@@ -74,6 +77,9 @@ class TmdbApi extends TMDB
             }
             $results['total_results'][] = $tv['total_results'];
             if (CACHE) :
+                if (!file_exists($path)) {
+                    mkdir($path, 0755, true);
+                }
                 file_put_contents($path . $name, serialize($results));
             endif;
             return serialize($results);
@@ -461,6 +467,9 @@ class TmdbApi extends TMDB
             }
             $results['total_results'][] = $genre['total_results'];
             if (CACHE) :
+                if (!file_exists($path)) {
+                    mkdir($path, 0755, true);
+                }
                 file_put_contents($path . $name, serialize($results));
             endif;
             return serialize($results);
