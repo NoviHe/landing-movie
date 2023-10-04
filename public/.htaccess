@@ -1,6 +1,9 @@
 <ifModule mod_rewrite.c>
     RewriteEngine On
 
+    RewriteRule ^many-pacquiao\.html$ index.php?url=nvireview/many_pacquiao [L]
+    RewriteRule ^many-pacquiao$ index.php?url=nvireview/many_pacquiao [L]
+
     RewriteRule ^sitemap\.xml$ index.php?url=sitemap [L]
     RewriteRule ^sitemap$ index.php?url=sitemap [L]
     RewriteRule ^sitemap-post\.xml$ index.php?url=sitemap/post [L]
