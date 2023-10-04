@@ -97,16 +97,9 @@
   </div>
   <div class="ads-468x60">
     <!--<img src="ads/468x60.jpg" alt="" />-->
-    <!-- <script type="text/javascript">
-        	atOptions = {
-        		'key' : 'ea529d3123b5d8e9d8809dbc023dadc3',
-        		'format' : 'iframe',
-        		'height' : 60,
-        		'width' : 468,
-        		'params' : {}
-        	};
-        	document.write('<scr' + 'ipt type="text/javascript" src="//wokm8isd4zit.com/ea529d3123b5d8e9d8809dbc023dadc3/invoke.js"></scr' + 'ipt>');
-        </script>    -->
+    <script>
+      document.write(atob("PHNjcmlwdCB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiPgogICAgICAgIAlhdE9wdGlvbnMgPSB7CiAgICAgICAgCQkna2V5JyA6ICdlYTUyOWQzMTIzYjVkOGU5ZDg4MDlkYmMwMjNkYWRjMycsCiAgICAgICAgCQknZm9ybWF0JyA6ICdpZnJhbWUnLAogICAgICAgIAkJJ2hlaWdodCcgOiA2MCwKICAgICAgICAJCSd3aWR0aCcgOiA0NjgsCiAgICAgICAgCQkncGFyYW1zJyA6IHt9CiAgICAgICAgCX07CiAgICAgICAgCWRvY3VtZW50LndyaXRlKCc8c2NyJyArICdpcHQgdHlwZT0idGV4dC9qYXZhc2NyaXB0IiBzcmM9Ii8vd29rbThpc2Q0eml0LmNvbS9lYTUyOWQzMTIzYjVkOGU5ZDg4MDlkYmMwMjNkYWRjMy9pbnZva2UuanMiPjwvc2NyJyArICdpcHQ+Jyk7CiAgICAgICAgPC9zY3JpcHQ+ICA="));
+    </script>
   </div>
   <div class="ads-320x50">
     <!--<img src="ads/320x50.jpg" alt="" />-->

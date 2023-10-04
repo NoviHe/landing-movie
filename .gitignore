@@ -14,3 +14,5 @@
 /cache/sigle/*.json
 /cache/tv/*.json
 /error_log
+
+/tmp/log/error.log
