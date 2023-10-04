@@ -1,0 +1,6 @@
+/public/cache/genre/*.json
+/public/cache/home/*.json
+/public/cache/movie/*.json
+/public/cache/search/*.json
+/public/cache/sigle/*.json
+/public/cache/tv/*.json
