@@ -61,3 +61,21 @@ Stack trace:
 #2 C:\laragon\www\landing-novi2\public\index.php(68): callHook()
 #3 {main}
   thrown in C:\laragon\www\landing-novi2\application\controllers\AdminController.php on line 12
+[07-Oct-2023 07:39:46 UTC] PHP Fatal error:  Uncaught TypeError: Return value of TMDB::_call() must be of the type array, int returned in C:\laragon\www\landing-novi2\library\tmdb.class.php:106
+Stack trace:
+#0 C:\laragon\www\landing-novi2\library\tmdb.class.php(116): TMDB->_call('movie/now_playi...', 'page=1')
+#1 C:\laragon\www\landing-novi2\application\api\tmdb.api.php(24): TMDB->getNowPlayingMovies(1)
+#2 C:\laragon\www\landing-novi2\application\controllers\HomeController.php(17): TmdbApi->getDataMovies('getNowPlayingMo...', 'now_playing_m_')
+#3 C:\laragon\www\landing-novi2\public\index.php(61): HomeController->index()
+#4 C:\laragon\www\landing-novi2\public\index.php(68): callHook()
+#5 {main}
+  thrown in C:\laragon\www\landing-novi2\library\tmdb.class.php on line 106
+[07-Oct-2023 07:40:37 UTC] PHP Fatal error:  Uncaught TypeError: Return value of TMDB::_call() must be of the type array, int returned in C:\laragon\www\landing-novi2\library\tmdb.class.php:106
+Stack trace:
+#0 C:\laragon\www\landing-novi2\library\tmdb.class.php(121): TMDB->_call('movie/top_rated', 'page=1')
+#1 C:\laragon\www\landing-novi2\application\api\tmdb.api.php(24): TMDB->getTopRatedMovies(1)
+#2 C:\laragon\www\landing-novi2\application\controllers\HomeController.php(19): TmdbApi->getDataMovies('getTopRatedMovi...', 'top_rated_m_')
+#3 C:\laragon\www\landing-novi2\public\index.php(61): HomeController->index()
+#4 C:\laragon\www\landing-novi2\public\index.php(68): callHook()
+#5 {main}
+  thrown in C:\laragon\www\landing-novi2\library\tmdb.class.php on line 106

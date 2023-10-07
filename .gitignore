@@ -1,3 +1,5 @@
+/public/public
+
 /public/cache/genre/*.json
 /public/cache/home/*.json
 /public/cache/movie/*.json
