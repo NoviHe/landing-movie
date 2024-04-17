@@ -79,3 +79,241 @@ Stack trace:
 #4 C:\laragon\www\landing-novi2\public\index.php(68): callHook()
 #5 {main}
   thrown in C:\laragon\www\landing-novi2\library\tmdb.class.php on line 106
+[17-Apr-2024 02:25:45 UTC] PHP Deprecated:  Creation of dynamic property HomeController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 02:25:46 UTC] PHP Deprecated:  mb_convert_encoding(): Handling HTML entities via mbstring is deprecated; use htmlspecialchars, htmlentities, or mb_encode_numericentity/mb_decode_numericentity instead in C:\laragon\www\landing-novi2\library\tmdb.class.php on line 99
+[17-Apr-2024 02:30:56 UTC] PHP Deprecated:  Creation of dynamic property HomeController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 02:30:57 UTC] PHP Deprecated:  mb_convert_encoding(): Handling HTML entities via mbstring is deprecated; use htmlspecialchars, htmlentities, or mb_encode_numericentity/mb_decode_numericentity instead in C:\laragon\www\landing-novi2\library\tmdb.class.php on line 99
+[17-Apr-2024 02:31:03 UTC] PHP Deprecated:  Creation of dynamic property MovieController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 02:31:03 UTC] PHP Deprecated:  mb_convert_encoding(): Handling HTML entities via mbstring is deprecated; use htmlspecialchars, htmlentities, or mb_encode_numericentity/mb_decode_numericentity instead in C:\laragon\www\landing-novi2\library\tmdb.class.php on line 99
+[17-Apr-2024 02:31:14 UTC] PHP Deprecated:  Creation of dynamic property MovieController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 02:32:33 UTC] PHP Deprecated:  Creation of dynamic property MovieController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 02:33:00 UTC] PHP Deprecated:  Creation of dynamic property MovieController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 02:33:03 UTC] PHP Deprecated:  Creation of dynamic property MovieController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 02:33:50 UTC] PHP Deprecated:  Creation of dynamic property MovieController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 02:34:52 UTC] PHP Deprecated:  Creation of dynamic property MovieController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 02:36:20 UTC] PHP Deprecated:  Creation of dynamic property MovieController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 02:37:14 UTC] PHP Deprecated:  Creation of dynamic property MovieController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 02:37:26 UTC] PHP Deprecated:  Creation of dynamic property MovieController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 02:38:15 UTC] PHP Deprecated:  Creation of dynamic property MovieController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 02:38:39 UTC] PHP Deprecated:  Creation of dynamic property MovieController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 02:38:47 UTC] PHP Deprecated:  Creation of dynamic property MovieController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 02:38:59 UTC] PHP Deprecated:  Creation of dynamic property MovieController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 02:40:01 UTC] PHP Deprecated:  Creation of dynamic property MovieController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 02:40:15 UTC] PHP Deprecated:  Creation of dynamic property MovieController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 02:41:00 UTC] PHP Deprecated:  Creation of dynamic property HomeController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 02:41:02 UTC] PHP Deprecated:  Creation of dynamic property MovieController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 02:41:03 UTC] PHP Deprecated:  mb_convert_encoding(): Handling HTML entities via mbstring is deprecated; use htmlspecialchars, htmlentities, or mb_encode_numericentity/mb_decode_numericentity instead in C:\laragon\www\landing-novi2\library\tmdb.class.php on line 99
+[17-Apr-2024 02:41:03 UTC] PHP Deprecated:  Creation of dynamic property MovieController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 02:44:19 UTC] PHP Deprecated:  Creation of dynamic property HomeController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 02:44:22 UTC] PHP Deprecated:  Creation of dynamic property MovieController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 02:44:23 UTC] PHP Deprecated:  mb_convert_encoding(): Handling HTML entities via mbstring is deprecated; use htmlspecialchars, htmlentities, or mb_encode_numericentity/mb_decode_numericentity instead in C:\laragon\www\landing-novi2\library\tmdb.class.php on line 99
+[17-Apr-2024 02:45:20 UTC] PHP Deprecated:  Creation of dynamic property MovieController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 02:51:48 UTC] PHP Deprecated:  Creation of dynamic property MovieController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 02:52:22 UTC] PHP Deprecated:  Creation of dynamic property MovieController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 02:53:36 UTC] PHP Deprecated:  Creation of dynamic property MovieController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 02:53:41 UTC] PHP Deprecated:  Creation of dynamic property MovieController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 02:54:07 UTC] PHP Deprecated:  Creation of dynamic property MovieController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 02:54:44 UTC] PHP Deprecated:  Creation of dynamic property MovieController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 02:56:04 UTC] PHP Deprecated:  Creation of dynamic property MovieController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 02:56:17 UTC] PHP Deprecated:  Creation of dynamic property MovieController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 02:57:23 UTC] PHP Deprecated:  Creation of dynamic property MovieController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 02:57:49 UTC] PHP Deprecated:  Creation of dynamic property MovieController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 02:58:54 UTC] PHP Deprecated:  Creation of dynamic property MovieController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 03:00:24 UTC] PHP Deprecated:  Creation of dynamic property MovieController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 03:01:24 UTC] PHP Deprecated:  Creation of dynamic property MovieController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 03:03:35 UTC] PHP Deprecated:  Creation of dynamic property MovieController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 03:04:34 UTC] PHP Deprecated:  Creation of dynamic property MovieController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 03:05:02 UTC] PHP Deprecated:  Creation of dynamic property MovieController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 03:05:43 UTC] PHP Deprecated:  Creation of dynamic property MovieController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 03:06:08 UTC] PHP Deprecated:  Creation of dynamic property MovieController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 03:07:03 UTC] PHP Deprecated:  Creation of dynamic property MovieController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 03:10:55 UTC] PHP Deprecated:  Creation of dynamic property MovieController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 03:11:18 UTC] PHP Deprecated:  Creation of dynamic property MovieController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 03:12:51 UTC] PHP Deprecated:  Creation of dynamic property MovieController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 03:13:11 UTC] PHP Deprecated:  Creation of dynamic property MovieController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 03:14:01 UTC] PHP Deprecated:  Creation of dynamic property MovieController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 03:15:36 UTC] PHP Deprecated:  Creation of dynamic property MovieController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 03:15:58 UTC] PHP Deprecated:  Creation of dynamic property MovieController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 03:16:10 UTC] PHP Deprecated:  Creation of dynamic property MovieController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 03:16:54 UTC] PHP Deprecated:  Creation of dynamic property MovieController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 03:17:23 UTC] PHP Deprecated:  Creation of dynamic property MovieController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 03:17:38 UTC] PHP Deprecated:  Creation of dynamic property MovieController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 03:19:23 UTC] PHP Deprecated:  Creation of dynamic property MovieController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 03:21:41 UTC] PHP Deprecated:  Creation of dynamic property MovieController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 03:22:27 UTC] PHP Deprecated:  Creation of dynamic property MovieController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 03:23:14 UTC] PHP Deprecated:  Creation of dynamic property MovieController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 03:23:23 UTC] PHP Deprecated:  Creation of dynamic property MovieController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 03:23:41 UTC] PHP Deprecated:  Creation of dynamic property MovieController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 03:23:44 UTC] PHP Deprecated:  Creation of dynamic property MovieController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 03:23:58 UTC] PHP Deprecated:  Creation of dynamic property MovieController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 03:24:54 UTC] PHP Deprecated:  Creation of dynamic property HomeController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 03:24:57 UTC] PHP Deprecated:  Creation of dynamic property MovieController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 03:25:01 UTC] PHP Deprecated:  Creation of dynamic property HomeController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 03:25:04 UTC] PHP Deprecated:  Creation of dynamic property MovieController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 03:25:06 UTC] PHP Deprecated:  mb_convert_encoding(): Handling HTML entities via mbstring is deprecated; use htmlspecialchars, htmlentities, or mb_encode_numericentity/mb_decode_numericentity instead in C:\laragon\www\landing-novi2\library\tmdb.class.php on line 99
+[17-Apr-2024 03:25:30 UTC] PHP Deprecated:  Creation of dynamic property HomeController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 03:25:41 UTC] PHP Deprecated:  Creation of dynamic property MovieController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 03:25:41 UTC] PHP Deprecated:  mb_convert_encoding(): Handling HTML entities via mbstring is deprecated; use htmlspecialchars, htmlentities, or mb_encode_numericentity/mb_decode_numericentity instead in C:\laragon\www\landing-novi2\library\tmdb.class.php on line 99
+[17-Apr-2024 03:25:45 UTC] PHP Deprecated:  Creation of dynamic property HomeController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 03:25:48 UTC] PHP Deprecated:  Creation of dynamic property TvController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 03:25:48 UTC] PHP Deprecated:  mb_convert_encoding(): Handling HTML entities via mbstring is deprecated; use htmlspecialchars, htmlentities, or mb_encode_numericentity/mb_decode_numericentity instead in C:\laragon\www\landing-novi2\library\tmdb.class.php on line 99
+[17-Apr-2024 03:25:48 UTC] PHP Warning:  Undefined variable $images in C:\laragon\www\landing-novi2\application\views\tv.view.php on line 228
+[17-Apr-2024 03:25:48 UTC] PHP Warning:  Undefined variable $title in C:\laragon\www\landing-novi2\application\views\tv.view.php on line 235
+[17-Apr-2024 03:26:03 UTC] PHP Deprecated:  Creation of dynamic property TvController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 03:26:03 UTC] PHP Deprecated:  mb_convert_encoding(): Handling HTML entities via mbstring is deprecated; use htmlspecialchars, htmlentities, or mb_encode_numericentity/mb_decode_numericentity instead in C:\laragon\www\landing-novi2\library\tmdb.class.php on line 99
+[17-Apr-2024 03:26:04 UTC] PHP Warning:  Undefined variable $images in C:\laragon\www\landing-novi2\application\views\tv.view.php on line 228
+[17-Apr-2024 03:26:04 UTC] PHP Warning:  Undefined variable $title in C:\laragon\www\landing-novi2\application\views\tv.view.php on line 235
+[17-Apr-2024 05:35:22 UTC] PHP Deprecated:  Creation of dynamic property HomeController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 05:35:46 UTC] PHP Deprecated:  Creation of dynamic property SearchController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 05:35:48 UTC] PHP Deprecated:  mb_convert_encoding(): Handling HTML entities via mbstring is deprecated; use htmlspecialchars, htmlentities, or mb_encode_numericentity/mb_decode_numericentity instead in C:\laragon\www\landing-novi2\library\tmdb.class.php on line 99
+[17-Apr-2024 05:35:54 UTC] PHP Deprecated:  Creation of dynamic property TvController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 05:35:55 UTC] PHP Deprecated:  mb_convert_encoding(): Handling HTML entities via mbstring is deprecated; use htmlspecialchars, htmlentities, or mb_encode_numericentity/mb_decode_numericentity instead in C:\laragon\www\landing-novi2\library\tmdb.class.php on line 99
+[17-Apr-2024 05:35:55 UTC] PHP Warning:  Undefined variable $images in C:\laragon\www\landing-novi2\application\views\tv.view.php on line 228
+[17-Apr-2024 05:35:55 UTC] PHP Warning:  Undefined variable $title in C:\laragon\www\landing-novi2\application\views\tv.view.php on line 235
+[17-Apr-2024 05:37:23 UTC] PHP Deprecated:  Creation of dynamic property TvController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 05:37:26 UTC] PHP Deprecated:  mb_convert_encoding(): Handling HTML entities via mbstring is deprecated; use htmlspecialchars, htmlentities, or mb_encode_numericentity/mb_decode_numericentity instead in C:\laragon\www\landing-novi2\library\tmdb.class.php on line 99
+[17-Apr-2024 05:37:26 UTC] PHP Warning:  Undefined variable $images in C:\laragon\www\landing-novi2\application\views\tv.view.php on line 293
+[17-Apr-2024 05:37:26 UTC] PHP Warning:  Undefined variable $title in C:\laragon\www\landing-novi2\application\views\tv.view.php on line 300
+[17-Apr-2024 05:39:32 UTC] PHP Deprecated:  Creation of dynamic property TvController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 05:39:33 UTC] PHP Deprecated:  mb_convert_encoding(): Handling HTML entities via mbstring is deprecated; use htmlspecialchars, htmlentities, or mb_encode_numericentity/mb_decode_numericentity instead in C:\laragon\www\landing-novi2\library\tmdb.class.php on line 99
+[17-Apr-2024 05:39:34 UTC] PHP Warning:  Undefined variable $images in C:\laragon\www\landing-novi2\application\views\tv.view.php on line 293
+[17-Apr-2024 05:39:34 UTC] PHP Warning:  Undefined variable $title in C:\laragon\www\landing-novi2\application\views\tv.view.php on line 300
+[17-Apr-2024 05:39:43 UTC] PHP Deprecated:  Creation of dynamic property TvController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 05:39:44 UTC] PHP Deprecated:  mb_convert_encoding(): Handling HTML entities via mbstring is deprecated; use htmlspecialchars, htmlentities, or mb_encode_numericentity/mb_decode_numericentity instead in C:\laragon\www\landing-novi2\library\tmdb.class.php on line 99
+[17-Apr-2024 05:39:47 UTC] PHP Warning:  Undefined variable $images in C:\laragon\www\landing-novi2\application\views\tv.view.php on line 293
+[17-Apr-2024 05:39:47 UTC] PHP Warning:  Undefined variable $title in C:\laragon\www\landing-novi2\application\views\tv.view.php on line 300
+[17-Apr-2024 05:39:51 UTC] PHP Deprecated:  Creation of dynamic property TvController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 05:39:51 UTC] PHP Deprecated:  mb_convert_encoding(): Handling HTML entities via mbstring is deprecated; use htmlspecialchars, htmlentities, or mb_encode_numericentity/mb_decode_numericentity instead in C:\laragon\www\landing-novi2\library\tmdb.class.php on line 99
+[17-Apr-2024 05:39:53 UTC] PHP Warning:  Undefined variable $images in C:\laragon\www\landing-novi2\application\views\tv.view.php on line 293
+[17-Apr-2024 05:39:53 UTC] PHP Warning:  Undefined variable $title in C:\laragon\www\landing-novi2\application\views\tv.view.php on line 300
+[17-Apr-2024 05:40:37 UTC] PHP Deprecated:  Creation of dynamic property TvController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 05:40:38 UTC] PHP Deprecated:  mb_convert_encoding(): Handling HTML entities via mbstring is deprecated; use htmlspecialchars, htmlentities, or mb_encode_numericentity/mb_decode_numericentity instead in C:\laragon\www\landing-novi2\library\tmdb.class.php on line 99
+[17-Apr-2024 05:40:41 UTC] PHP Warning:  Undefined variable $images in C:\laragon\www\landing-novi2\application\views\tv.view.php on line 296
+[17-Apr-2024 05:40:41 UTC] PHP Warning:  Undefined variable $title in C:\laragon\www\landing-novi2\application\views\tv.view.php on line 303
+[17-Apr-2024 05:41:27 UTC] PHP Deprecated:  Creation of dynamic property TvController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 05:41:28 UTC] PHP Deprecated:  mb_convert_encoding(): Handling HTML entities via mbstring is deprecated; use htmlspecialchars, htmlentities, or mb_encode_numericentity/mb_decode_numericentity instead in C:\laragon\www\landing-novi2\library\tmdb.class.php on line 99
+[17-Apr-2024 05:41:35 UTC] PHP Warning:  Undefined variable $images in C:\laragon\www\landing-novi2\application\views\tv.view.php on line 296
+[17-Apr-2024 05:41:35 UTC] PHP Warning:  Undefined variable $title in C:\laragon\www\landing-novi2\application\views\tv.view.php on line 303
+[17-Apr-2024 05:47:41 UTC] PHP Deprecated:  Creation of dynamic property TvController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 05:47:41 UTC] PHP Deprecated:  mb_convert_encoding(): Handling HTML entities via mbstring is deprecated; use htmlspecialchars, htmlentities, or mb_encode_numericentity/mb_decode_numericentity instead in C:\laragon\www\landing-novi2\library\tmdb.class.php on line 99
+[17-Apr-2024 05:47:42 UTC] PHP Warning:  Undefined variable $images in C:\laragon\www\landing-novi2\application\views\tv.view.php on line 298
+[17-Apr-2024 05:47:42 UTC] PHP Warning:  Undefined variable $title in C:\laragon\www\landing-novi2\application\views\tv.view.php on line 305
+[17-Apr-2024 05:49:17 UTC] PHP Deprecated:  Creation of dynamic property TvController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 05:49:18 UTC] PHP Deprecated:  mb_convert_encoding(): Handling HTML entities via mbstring is deprecated; use htmlspecialchars, htmlentities, or mb_encode_numericentity/mb_decode_numericentity instead in C:\laragon\www\landing-novi2\library\tmdb.class.php on line 99
+[17-Apr-2024 05:49:19 UTC] PHP Warning:  Undefined variable $images in C:\laragon\www\landing-novi2\application\views\tv.view.php on line 297
+[17-Apr-2024 05:49:19 UTC] PHP Warning:  Undefined variable $title in C:\laragon\www\landing-novi2\application\views\tv.view.php on line 304
+[17-Apr-2024 05:49:26 UTC] PHP Deprecated:  Creation of dynamic property TvController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 05:49:26 UTC] PHP Deprecated:  mb_convert_encoding(): Handling HTML entities via mbstring is deprecated; use htmlspecialchars, htmlentities, or mb_encode_numericentity/mb_decode_numericentity instead in C:\laragon\www\landing-novi2\library\tmdb.class.php on line 99
+[17-Apr-2024 05:49:26 UTC] PHP Warning:  Undefined variable $images in C:\laragon\www\landing-novi2\application\views\tv.view.php on line 297
+[17-Apr-2024 05:49:26 UTC] PHP Warning:  Undefined variable $title in C:\laragon\www\landing-novi2\application\views\tv.view.php on line 304
+[17-Apr-2024 05:50:08 UTC] PHP Deprecated:  Creation of dynamic property TvController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 05:50:09 UTC] PHP Deprecated:  mb_convert_encoding(): Handling HTML entities via mbstring is deprecated; use htmlspecialchars, htmlentities, or mb_encode_numericentity/mb_decode_numericentity instead in C:\laragon\www\landing-novi2\library\tmdb.class.php on line 99
+[17-Apr-2024 05:50:09 UTC] PHP Warning:  Undefined variable $images in C:\laragon\www\landing-novi2\application\views\tv.view.php on line 297
+[17-Apr-2024 05:50:09 UTC] PHP Warning:  Undefined variable $title in C:\laragon\www\landing-novi2\application\views\tv.view.php on line 304
+[17-Apr-2024 05:50:33 UTC] PHP Deprecated:  Creation of dynamic property TvController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 05:50:35 UTC] PHP Deprecated:  mb_convert_encoding(): Handling HTML entities via mbstring is deprecated; use htmlspecialchars, htmlentities, or mb_encode_numericentity/mb_decode_numericentity instead in C:\laragon\www\landing-novi2\library\tmdb.class.php on line 99
+[17-Apr-2024 05:50:35 UTC] PHP Warning:  Undefined variable $images in C:\laragon\www\landing-novi2\application\views\tv.view.php on line 297
+[17-Apr-2024 05:50:35 UTC] PHP Warning:  Undefined variable $title in C:\laragon\www\landing-novi2\application\views\tv.view.php on line 304
+[17-Apr-2024 05:50:38 UTC] PHP Deprecated:  Creation of dynamic property TvController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 05:50:39 UTC] PHP Deprecated:  mb_convert_encoding(): Handling HTML entities via mbstring is deprecated; use htmlspecialchars, htmlentities, or mb_encode_numericentity/mb_decode_numericentity instead in C:\laragon\www\landing-novi2\library\tmdb.class.php on line 99
+[17-Apr-2024 05:50:40 UTC] PHP Warning:  Undefined variable $images in C:\laragon\www\landing-novi2\application\views\tv.view.php on line 297
+[17-Apr-2024 05:50:40 UTC] PHP Warning:  Undefined variable $title in C:\laragon\www\landing-novi2\application\views\tv.view.php on line 304
+[17-Apr-2024 05:50:44 UTC] PHP Deprecated:  Creation of dynamic property TvController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 05:50:45 UTC] PHP Deprecated:  mb_convert_encoding(): Handling HTML entities via mbstring is deprecated; use htmlspecialchars, htmlentities, or mb_encode_numericentity/mb_decode_numericentity instead in C:\laragon\www\landing-novi2\library\tmdb.class.php on line 99
+[17-Apr-2024 05:50:59 UTC] PHP Warning:  Undefined variable $images in C:\laragon\www\landing-novi2\application\views\tv.view.php on line 297
+[17-Apr-2024 05:50:59 UTC] PHP Warning:  Undefined variable $title in C:\laragon\www\landing-novi2\application\views\tv.view.php on line 304
+[17-Apr-2024 05:53:14 UTC] PHP Deprecated:  Creation of dynamic property TvController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 05:53:15 UTC] PHP Deprecated:  mb_convert_encoding(): Handling HTML entities via mbstring is deprecated; use htmlspecialchars, htmlentities, or mb_encode_numericentity/mb_decode_numericentity instead in C:\laragon\www\landing-novi2\library\tmdb.class.php on line 99
+[17-Apr-2024 05:53:15 UTC] PHP Warning:  Undefined variable $images in C:\laragon\www\landing-novi2\application\views\tv.view.php on line 301
+[17-Apr-2024 05:53:15 UTC] PHP Warning:  Undefined variable $title in C:\laragon\www\landing-novi2\application\views\tv.view.php on line 308
+[17-Apr-2024 05:53:19 UTC] PHP Deprecated:  Creation of dynamic property TvController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 05:53:19 UTC] PHP Deprecated:  mb_convert_encoding(): Handling HTML entities via mbstring is deprecated; use htmlspecialchars, htmlentities, or mb_encode_numericentity/mb_decode_numericentity instead in C:\laragon\www\landing-novi2\library\tmdb.class.php on line 99
+[17-Apr-2024 05:53:19 UTC] PHP Warning:  Undefined array key 1 in C:\laragon\www\landing-novi2\application\views\tv.view.php on line 15
+[17-Apr-2024 05:53:19 UTC] PHP Warning:  Undefined variable $images in C:\laragon\www\landing-novi2\application\views\tv.view.php on line 301
+[17-Apr-2024 05:53:19 UTC] PHP Warning:  Undefined variable $title in C:\laragon\www\landing-novi2\application\views\tv.view.php on line 308
+[17-Apr-2024 05:53:56 UTC] PHP Deprecated:  Creation of dynamic property TvController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 05:53:57 UTC] PHP Deprecated:  mb_convert_encoding(): Handling HTML entities via mbstring is deprecated; use htmlspecialchars, htmlentities, or mb_encode_numericentity/mb_decode_numericentity instead in C:\laragon\www\landing-novi2\library\tmdb.class.php on line 99
+[17-Apr-2024 05:53:57 UTC] PHP Warning:  Undefined array key 1 in C:\laragon\www\landing-novi2\application\views\tv.view.php on line 15
+[17-Apr-2024 05:53:57 UTC] PHP Warning:  Undefined variable $images in C:\laragon\www\landing-novi2\application\views\tv.view.php on line 303
+[17-Apr-2024 05:53:57 UTC] PHP Warning:  Undefined variable $title in C:\laragon\www\landing-novi2\application\views\tv.view.php on line 310
+[17-Apr-2024 05:54:26 UTC] PHP Deprecated:  Creation of dynamic property TvController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 05:54:27 UTC] PHP Deprecated:  mb_convert_encoding(): Handling HTML entities via mbstring is deprecated; use htmlspecialchars, htmlentities, or mb_encode_numericentity/mb_decode_numericentity instead in C:\laragon\www\landing-novi2\library\tmdb.class.php on line 99
+[17-Apr-2024 05:54:27 UTC] PHP Warning:  Undefined array key 1 in C:\laragon\www\landing-novi2\application\views\tv.view.php on line 15
+[17-Apr-2024 05:54:27 UTC] PHP Warning:  Undefined variable $images in C:\laragon\www\landing-novi2\application\views\tv.view.php on line 303
+[17-Apr-2024 05:54:27 UTC] PHP Warning:  Undefined variable $title in C:\laragon\www\landing-novi2\application\views\tv.view.php on line 310
+[17-Apr-2024 05:54:49 UTC] PHP Deprecated:  Creation of dynamic property TvController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 05:54:50 UTC] PHP Deprecated:  mb_convert_encoding(): Handling HTML entities via mbstring is deprecated; use htmlspecialchars, htmlentities, or mb_encode_numericentity/mb_decode_numericentity instead in C:\laragon\www\landing-novi2\library\tmdb.class.php on line 99
+[17-Apr-2024 05:54:50 UTC] PHP Warning:  Undefined array key 1 in C:\laragon\www\landing-novi2\application\views\tv.view.php on line 15
+[17-Apr-2024 05:54:50 UTC] PHP Warning:  Undefined variable $images in C:\laragon\www\landing-novi2\application\views\tv.view.php on line 303
+[17-Apr-2024 05:54:50 UTC] PHP Warning:  Undefined variable $title in C:\laragon\www\landing-novi2\application\views\tv.view.php on line 310
+[17-Apr-2024 05:55:22 UTC] PHP Deprecated:  Creation of dynamic property TvController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 05:55:22 UTC] PHP Deprecated:  mb_convert_encoding(): Handling HTML entities via mbstring is deprecated; use htmlspecialchars, htmlentities, or mb_encode_numericentity/mb_decode_numericentity instead in C:\laragon\www\landing-novi2\library\tmdb.class.php on line 99
+[17-Apr-2024 05:55:22 UTC] PHP Warning:  Undefined array key 1 in C:\laragon\www\landing-novi2\application\views\tv.view.php on line 15
+[17-Apr-2024 05:55:22 UTC] PHP Warning:  Undefined variable $images in C:\laragon\www\landing-novi2\application\views\tv.view.php on line 303
+[17-Apr-2024 05:55:22 UTC] PHP Warning:  Undefined variable $title in C:\laragon\www\landing-novi2\application\views\tv.view.php on line 310
+[17-Apr-2024 05:55:30 UTC] PHP Deprecated:  Creation of dynamic property TvController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 05:55:31 UTC] PHP Deprecated:  mb_convert_encoding(): Handling HTML entities via mbstring is deprecated; use htmlspecialchars, htmlentities, or mb_encode_numericentity/mb_decode_numericentity instead in C:\laragon\www\landing-novi2\library\tmdb.class.php on line 99
+[17-Apr-2024 05:55:31 UTC] PHP Warning:  Undefined array key 1 in C:\laragon\www\landing-novi2\application\views\tv.view.php on line 15
+[17-Apr-2024 05:55:31 UTC] PHP Warning:  Undefined variable $images in C:\laragon\www\landing-novi2\application\views\tv.view.php on line 303
+[17-Apr-2024 05:55:31 UTC] PHP Warning:  Undefined variable $title in C:\laragon\www\landing-novi2\application\views\tv.view.php on line 310
+[17-Apr-2024 05:55:50 UTC] PHP Deprecated:  Creation of dynamic property TvController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 05:55:51 UTC] PHP Deprecated:  mb_convert_encoding(): Handling HTML entities via mbstring is deprecated; use htmlspecialchars, htmlentities, or mb_encode_numericentity/mb_decode_numericentity instead in C:\laragon\www\landing-novi2\library\tmdb.class.php on line 99
+[17-Apr-2024 05:55:51 UTC] PHP Warning:  Undefined array key 1 in C:\laragon\www\landing-novi2\application\views\tv.view.php on line 15
+[17-Apr-2024 05:55:51 UTC] PHP Warning:  Undefined variable $images in C:\laragon\www\landing-novi2\application\views\tv.view.php on line 303
+[17-Apr-2024 05:55:51 UTC] PHP Warning:  Undefined variable $title in C:\laragon\www\landing-novi2\application\views\tv.view.php on line 310
+[17-Apr-2024 05:56:13 UTC] PHP Deprecated:  Creation of dynamic property TvController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 05:56:14 UTC] PHP Deprecated:  mb_convert_encoding(): Handling HTML entities via mbstring is deprecated; use htmlspecialchars, htmlentities, or mb_encode_numericentity/mb_decode_numericentity instead in C:\laragon\www\landing-novi2\library\tmdb.class.php on line 99
+[17-Apr-2024 05:56:14 UTC] PHP Warning:  Undefined array key 1 in C:\laragon\www\landing-novi2\application\views\tv.view.php on line 15
+[17-Apr-2024 05:56:14 UTC] PHP Warning:  Undefined variable $images in C:\laragon\www\landing-novi2\application\views\tv.view.php on line 303
+[17-Apr-2024 05:56:14 UTC] PHP Warning:  Undefined variable $title in C:\laragon\www\landing-novi2\application\views\tv.view.php on line 310
+[17-Apr-2024 05:56:33 UTC] PHP Deprecated:  Creation of dynamic property TvController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 05:56:33 UTC] PHP Deprecated:  mb_convert_encoding(): Handling HTML entities via mbstring is deprecated; use htmlspecialchars, htmlentities, or mb_encode_numericentity/mb_decode_numericentity instead in C:\laragon\www\landing-novi2\library\tmdb.class.php on line 99
+[17-Apr-2024 05:56:33 UTC] PHP Warning:  Undefined array key 1 in C:\laragon\www\landing-novi2\application\views\tv.view.php on line 15
+[17-Apr-2024 05:56:33 UTC] PHP Warning:  Undefined variable $images in C:\laragon\www\landing-novi2\application\views\tv.view.php on line 303
+[17-Apr-2024 05:56:33 UTC] PHP Warning:  Undefined variable $title in C:\laragon\www\landing-novi2\application\views\tv.view.php on line 310
+[17-Apr-2024 05:57:54 UTC] PHP Deprecated:  Creation of dynamic property TvController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 05:57:55 UTC] PHP Deprecated:  mb_convert_encoding(): Handling HTML entities via mbstring is deprecated; use htmlspecialchars, htmlentities, or mb_encode_numericentity/mb_decode_numericentity instead in C:\laragon\www\landing-novi2\library\tmdb.class.php on line 99
+[17-Apr-2024 05:57:55 UTC] PHP Warning:  Undefined array key 1 in C:\laragon\www\landing-novi2\application\views\tv.view.php on line 15
+[17-Apr-2024 05:57:55 UTC] PHP Warning:  Undefined array key 1 in C:\laragon\www\landing-novi2\application\views\tv.view.php on line 65
+[17-Apr-2024 05:57:55 UTC] PHP Warning:  Undefined array key 2 in C:\laragon\www\landing-novi2\application\views\tv.view.php on line 65
+[17-Apr-2024 05:57:55 UTC] PHP Warning:  Undefined variable $images in C:\laragon\www\landing-novi2\application\views\tv.view.php on line 303
+[17-Apr-2024 05:57:55 UTC] PHP Warning:  Undefined variable $title in C:\laragon\www\landing-novi2\application\views\tv.view.php on line 310
+[17-Apr-2024 05:57:59 UTC] PHP Deprecated:  Creation of dynamic property TvController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 05:58:00 UTC] PHP Deprecated:  mb_convert_encoding(): Handling HTML entities via mbstring is deprecated; use htmlspecialchars, htmlentities, or mb_encode_numericentity/mb_decode_numericentity instead in C:\laragon\www\landing-novi2\library\tmdb.class.php on line 99
+[17-Apr-2024 05:58:01 UTC] PHP Warning:  Undefined array key 2 in C:\laragon\www\landing-novi2\application\views\tv.view.php on line 65
+[17-Apr-2024 05:58:01 UTC] PHP Warning:  Undefined variable $images in C:\laragon\www\landing-novi2\application\views\tv.view.php on line 303
+[17-Apr-2024 05:58:01 UTC] PHP Warning:  Undefined variable $title in C:\laragon\www\landing-novi2\application\views\tv.view.php on line 310
+[17-Apr-2024 05:58:03 UTC] PHP Deprecated:  Creation of dynamic property TvController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 05:58:06 UTC] PHP Deprecated:  mb_convert_encoding(): Handling HTML entities via mbstring is deprecated; use htmlspecialchars, htmlentities, or mb_encode_numericentity/mb_decode_numericentity instead in C:\laragon\www\landing-novi2\library\tmdb.class.php on line 99
+[17-Apr-2024 05:58:09 UTC] PHP Warning:  Undefined variable $images in C:\laragon\www\landing-novi2\application\views\tv.view.php on line 303
+[17-Apr-2024 05:58:09 UTC] PHP Warning:  Undefined variable $title in C:\laragon\www\landing-novi2\application\views\tv.view.php on line 310
+[17-Apr-2024 05:58:31 UTC] PHP Deprecated:  Creation of dynamic property HomeController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 06:05:26 UTC] PHP Deprecated:  Creation of dynamic property HomeController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 06:05:35 UTC] PHP Deprecated:  Creation of dynamic property HomeController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 06:05:54 UTC] PHP Deprecated:  Creation of dynamic property HomeController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 06:06:06 UTC] PHP Deprecated:  Creation of dynamic property MovieController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 06:06:45 UTC] PHP Deprecated:  Creation of dynamic property MovieController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 06:07:37 UTC] PHP Deprecated:  Creation of dynamic property HomeController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 06:07:51 UTC] PHP Deprecated:  Creation of dynamic property MovieController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 06:09:17 UTC] PHP Deprecated:  Creation of dynamic property MovieController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 06:09:22 UTC] PHP Deprecated:  Creation of dynamic property HomeController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 06:18:37 UTC] PHP Deprecated:  Creation of dynamic property HomeController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 06:20:06 UTC] PHP Deprecated:  Creation of dynamic property HomeController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 06:23:04 UTC] PHP Deprecated:  Creation of dynamic property HomeController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 06:26:37 UTC] PHP Deprecated:  Creation of dynamic property HomeController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 06:27:32 UTC] PHP Deprecated:  Creation of dynamic property HomeController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 06:27:35 UTC] PHP Deprecated:  Creation of dynamic property HomeController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 06:27:39 UTC] PHP Deprecated:  Creation of dynamic property HomeController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 06:28:23 UTC] PHP Deprecated:  Creation of dynamic property HomeController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 06:28:31 UTC] PHP Deprecated:  Creation of dynamic property MovieController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 06:28:32 UTC] PHP Deprecated:  mb_convert_encoding(): Handling HTML entities via mbstring is deprecated; use htmlspecialchars, htmlentities, or mb_encode_numericentity/mb_decode_numericentity instead in C:\laragon\www\landing-novi2\library\tmdb.class.php on line 99
+[17-Apr-2024 06:30:20 UTC] PHP Deprecated:  Creation of dynamic property MovieController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 06:30:43 UTC] PHP Deprecated:  Creation of dynamic property MovieController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 06:31:23 UTC] PHP Deprecated:  Creation of dynamic property MovieController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 06:31:29 UTC] PHP Deprecated:  Creation of dynamic property HomeController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 06:31:33 UTC] PHP Deprecated:  Creation of dynamic property MovieController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 06:31:37 UTC] PHP Deprecated:  Creation of dynamic property HomeController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 06:31:39 UTC] PHP Deprecated:  Creation of dynamic property MovieController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 06:32:35 UTC] PHP Deprecated:  Creation of dynamic property MovieController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 06:32:45 UTC] PHP Deprecated:  Creation of dynamic property MovieController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42
+[17-Apr-2024 06:33:04 UTC] PHP Deprecated:  Creation of dynamic property MovieController::$tmdb is deprecated in C:\laragon\www\landing-novi2\library\controller.class.php on line 42

@@ -1,11 +1,14 @@
 <?php
 define('DEVELOPMENT_ENVIRONMENT', false);
+
 // define('BASE_PATH', 'http://localhost/landing-novi2');
 // define('URL_WEBSITE', 'http://landing-novi2.test');
 // define('DOCUMENT_ROOT', $_SERVER['DOCUMENT_ROOT']);
+
 define('BASE_PATH', 'https://nvireview.com');
 define('URL_WEBSITE', 'https://nvireview.com');
 define('DOCUMENT_ROOT', $_SERVER['DOCUMENT_ROOT'] . '/public');
+
 define('DEFAULT_CONTROLLER', 'home');
 define('SITES_URL', $_SERVER['HTTP_HOST']);
 

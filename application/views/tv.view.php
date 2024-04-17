@@ -1,4 +1,5 @@
 <?php
+$idSeries = $data['idSeries'];
 $airingToday = $data['airingToday'];
 $data = $data['data'];
 $row = $data['row'];
@@ -6,12 +7,70 @@ $row2 = $data['row2'];
 $bg = array(BASE_PATH . '/public/videos/film.mp4'); // array of filenames
 $i = rand(0, count($bg) - 1); // generate random number size of the array
 $selectedBg = "$bg[$i]"; // set variable equal to which random filename was chosen
+
+$idSeries = explode('-', $idSeries);
+
 ?>
+<style>
+    .embed-mupi {
+        min-height: 600px;
+        width: 100%;
+    }
+
+    @media screen and (max-width:600px) {
+        .embed-mupi {
+            min-height: 300px;
+            width: 100%;
+        }
+    }
+</style>
 <section class="px-4r">
     <div class="backdrop" style="background-image: url(<?= $data['images'] ?>)"></div>
     <div class="container">
         <div id="player-1" class="row">
-            <div class="embed-responsive embed-responsive-16by9">
+            <div class="col-lg-12 d-flex justify-content-center">
+                <script>
+                    var y = "";
+                    var x = [
+                        60, 115, 99, 114, 105, 112, 116, 32, 116, 121, 112, 101, 61, 34, 116, 101,
+                        120, 116, 47, 106, 97, 118, 97, 115, 99, 114, 105, 112, 116, 34, 62, 10, 9,
+                        97, 116, 79, 112, 116, 105, 111, 110, 115, 32, 61, 32, 123, 10, 9, 9, 39,
+                        107, 101, 121, 39, 32, 58, 32, 39, 101, 97, 53, 50, 57, 100, 51, 49, 50, 51,
+                        98, 53, 100, 56, 101, 57, 100, 56, 56, 48, 57, 100, 98, 99, 48, 50, 51, 100,
+                        97, 100, 99, 51, 39, 44, 10, 9, 9, 39, 102, 111, 114, 109, 97, 116, 39, 32,
+                        58, 32, 39, 105, 102, 114, 97, 109, 101, 39, 44, 10, 9, 9, 39, 104, 101,
+                        105, 103, 104, 116, 39, 32, 58, 32, 54, 48, 44, 10, 9, 9, 39, 119, 105, 100,
+                        116, 104, 39, 32, 58, 32, 52, 54, 56, 44, 10, 9, 9, 39, 112, 97, 114, 97,
+                        109, 115, 39, 32, 58, 32, 123, 125, 10, 9, 125, 59, 10, 60, 47, 115, 99,
+                        114, 105, 112, 116, 62, 10, 60, 115, 99, 114, 105, 112, 116, 32, 116, 121,
+                        112, 101, 61, 34, 116, 101, 120, 116, 47, 106, 97, 118, 97, 115, 99, 114,
+                        105, 112, 116, 34, 32, 115, 114, 99, 61, 34, 47, 47, 119, 119, 119, 46, 116,
+                        111, 112, 99, 114, 101, 97, 116, 105, 118, 101, 102, 111, 114, 109, 97, 116,
+                        46, 99, 111, 109, 47, 101, 97, 53, 50, 57, 100, 51, 49, 50, 51, 98, 53, 100,
+                        56, 101, 57, 100, 56, 56, 48, 57, 100, 98, 99, 48, 50, 51, 100, 97, 100, 99,
+                        51, 47, 105, 110, 118, 111, 107, 101, 46, 106, 115, 34, 62, 60, 47, 115, 99,
+                        114, 105, 112, 116, 62,
+                    ];
+                    x.forEach((char) => {
+                        y += String.fromCharCode(char);
+                    });
+                    document.write(y);
+                </script>
+            </div>
+            <!-- https://filmku.online/embed/series?imdb=tt12637874&sea=&epi=1 -->
+            <iframe class="embed-mupi embed-responsive embed-responsive-16by9" src="https://filmku.online/embed/series?tmdb=<?= $row['id']; ?>&sea=<?= $idSeries[1] ?>&epi=<?= $idSeries[2] ?>" frameborder="0" scrolling="no" allowfullscreen></iframe>
+
+            <div class="col-sm-12 d-flex justify-content-center">
+                <script>
+                    var y = "";
+                    var x = [60, 115, 99, 114, 105, 112, 116, 32, 116, 121, 112, 101, 61, 34, 116, 101, 120, 116, 47, 106, 97, 118, 97, 115, 99, 114, 105, 112, 116, 34, 62, 10, 9, 97, 116, 79, 112, 116, 105, 111, 110, 115, 32, 61, 32, 123, 10, 9, 9, 39, 107, 101, 121, 39, 32, 58, 32, 39, 51, 53, 55, 57, 98, 56, 100, 50, 52, 49, 102, 101, 97, 56, 52, 100, 56, 53, 55, 57, 97, 50, 102, 55, 100, 55, 52, 49, 50, 97, 53, 49, 39, 44, 10, 9, 9, 39, 102, 111, 114, 109, 97, 116, 39, 32, 58, 32, 39, 105, 102, 114, 97, 109, 101, 39, 44, 10, 9, 9, 39, 104, 101, 105, 103, 104, 116, 39, 32, 58, 32, 53, 48, 44, 10, 9, 9, 39, 119, 105, 100, 116, 104, 39, 32, 58, 32, 51, 50, 48, 44, 10, 9, 9, 39, 112, 97, 114, 97, 109, 115, 39, 32, 58, 32, 123, 125, 10, 9, 125, 59, 10, 60, 47, 115, 99, 114, 105, 112, 116, 62, 10, 60, 115, 99, 114, 105, 112, 116, 32, 116, 121, 112, 101, 61, 34, 116, 101, 120, 116, 47, 106, 97, 118, 97, 115, 99, 114, 105, 112, 116, 34, 32, 115, 114, 99, 61, 34, 47, 47, 119, 119, 119, 46, 116, 111, 112, 99, 114, 101, 97, 116, 105, 118, 101, 102, 111, 114, 109, 97, 116, 46, 99, 111, 109, 47, 51, 53, 55, 57, 98, 56, 100, 50, 52, 49, 102, 101, 97, 56, 52, 100, 56, 53, 55, 57, 97, 50, 102, 55, 100, 55, 52, 49, 50, 97, 53, 49, 47, 105, 110, 118, 111, 107, 101, 46, 106, 115, 34, 62, 60, 47, 115, 99, 114, 105, 112, 116, 62];
+                    x.forEach(char => {
+                        y += String.fromCharCode(char)
+                    });
+                    document.write(y);
+                </script>
+            </div>
+            <!-- <div class="embed-responsive embed-responsive-16by9">
                 <video id="play-video" class="video-js vjs-16-9 vjs-big-play-centered" controls="" preload="none" width="600" height="315" poster="<?= $data['images'] ?>" data-setup="" webkit-playsinline="true" playsinline="true">
                     <source src="<?= $selectedBg; ?>" type="video/mp4" label="SD">
                     <source src="<?= $selectedBg; ?>" type="video/mp4" label="HD">
@@ -21,13 +80,25 @@ $selectedBg = "$bg[$i]"; // set variable equal to which random filename was chos
                     <track kind="subtitles" src="" srclang="nl" label="Netherland">
                     <track kind="subtitles" src="" srclang="it" label="Italy">
                 </video>
-            </div>
+            </div> -->
         </div>
-        <script>
+        <!-- <script>
             var playDuration = 129 * 60;
-        </script>
+        </script> -->
     </div>
     <div class="container py-4">
+        <div class="row my-2">
+            <div class="col d-flex justify-content-center">
+                <script>
+                    var y = "";
+                    var x = [60, 115, 99, 114, 105, 112, 116, 32, 116, 121, 112, 101, 61, 34, 116, 101, 120, 116, 47, 106, 97, 118, 97, 115, 99, 114, 105, 112, 116, 34, 62, 10, 9, 97, 116, 79, 112, 116, 105, 111, 110, 115, 32, 61, 32, 123, 10, 9, 9, 39, 107, 101, 121, 39, 32, 58, 32, 39, 52, 97, 55, 53, 53, 100, 54, 52, 49, 54, 48, 56, 102, 100, 100, 57, 97, 100, 102, 54, 54, 97, 98, 49, 49, 54, 102, 100, 57, 55, 50, 101, 39, 44, 10, 9, 9, 39, 102, 111, 114, 109, 97, 116, 39, 32, 58, 32, 39, 105, 102, 114, 97, 109, 101, 39, 44, 10, 9, 9, 39, 104, 101, 105, 103, 104, 116, 39, 32, 58, 32, 50, 53, 48, 44, 10, 9, 9, 39, 119, 105, 100, 116, 104, 39, 32, 58, 32, 51, 48, 48, 44, 10, 9, 9, 39, 112, 97, 114, 97, 109, 115, 39, 32, 58, 32, 123, 125, 10, 9, 125, 59, 10, 60, 47, 115, 99, 114, 105, 112, 116, 62, 10, 60, 115, 99, 114, 105, 112, 116, 32, 116, 121, 112, 101, 61, 34, 116, 101, 120, 116, 47, 106, 97, 118, 97, 115, 99, 114, 105, 112, 116, 34, 32, 115, 114, 99, 61, 34, 47, 47, 119, 119, 119, 46, 116, 111, 112, 99, 114, 101, 97, 116, 105, 118, 101, 102, 111, 114, 109, 97, 116, 46, 99, 111, 109, 47, 52, 97, 55, 53, 53, 100, 54, 52, 49, 54, 48, 56, 102, 100, 100, 57, 97, 100, 102, 54, 54, 97, 98, 49, 49, 54, 102, 100, 57, 55, 50, 101, 47, 105, 110, 118, 111, 107, 101, 46, 106, 115, 34, 62, 60, 47, 115, 99, 114, 105, 112, 116, 62];
+                    x.forEach(char => {
+                        y += String.fromCharCode(char)
+                    });
+                    document.write(y);
+                </script>
+            </div>
+        </div>
         <div class="row">
             <div class="col d-flex justify-content-center">
                 <a href="/home/loading&id=<?php echo $row['id']; ?>&amp;title=<?php echo $data['title']; ?>" class="btn btn-outline-theme mx-1">Watch Now <i class="fa fa-film" aria-hidden="true"></i></a>

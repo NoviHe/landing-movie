@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="robots" content="noindex">
-  <title> Loading...</title>
-  <!-- <meta http-equiv="refresh" content="2;url=<?php echo OFFER_LINK1 . $sub_id; ?>"> -->
+  <title>Register Loading...</title>
+  <meta http-equiv="refresh" content="2;url=<?php echo OFFER_LINK1 . $sub_id; ?>">
 
   <style>
     .loading-redirect {
@@ -87,23 +87,12 @@
 
   <?php echo histats_code() ?>
 
-  <script type="text/javascript">
-    var kfyJE_hZR_NlLEAc = {
-      "it": 4290486,
-      "key": "04e43"
-    };
-  </script>
-  <script src="https://d2ntqa2f0qw7q7.cloudfront.net/1559c56.js"></script>
-
 </head>
 
 <body class="text-center">
 
   <div class="loading-redirect">
     <div class="lds-dual-ring"></div>
-    <script>
-      setTimeout(_JF, 5000);
-    </script>
   </div>
 
 </body>

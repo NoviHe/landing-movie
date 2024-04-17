@@ -84,7 +84,7 @@ class Model
 
         return $this->query($query);
     }
-    public function selectJoin($table, $join = "JOIN", $param, $condition = '', $orderBy = '', $order = 'ASC', $limit = '')
+    public function selectJoin($table = null, $join = "JOIN", $param = null, $condition = '', $orderBy = '', $order = 'ASC', $limit = '')
     {
         $query = "SELECT*FROM " . $this->_table;
 

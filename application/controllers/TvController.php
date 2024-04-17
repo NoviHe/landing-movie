@@ -19,6 +19,7 @@ class TvController extends MainController
         if (!empty($id)) {
             $data = $this->tmdb->getDataTvShow($id);
             $this->template('tv', array(
+                'idSeries' => $id,
                 'data' => $data,
                 'hack_title' => $data['hack_title'],
                 'hack_description' => $data['hack_description'],

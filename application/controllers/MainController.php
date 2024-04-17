@@ -22,8 +22,7 @@ class MainController extends Controller
         $view->bind('hack_keywords', isset($data['data']['hack_keywords']) ? SITE_KEYWORDS . ', ' . $data['data']['hack_keywords'] : SITE_KEYWORDS);
 
         $view->bind('images', isset($data['data']['images']) ? $data['data']['images'] : null);
-        
-                $view->bind('hack_images', isset($data['data']['hack_images']) ? $data['data']['hack_images'] : null);
 
+        $view->bind('hack_images', isset($data['data']['hack_images']) ? $data['data']['hack_images'] : null);
     }
 }
