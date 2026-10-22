@@ -4,9 +4,9 @@ namespace application\controllers\admin;
 
 use Controller;
 
+#[\AllowDynamicProperties]
 class AdminMainController extends Controller
 {
-
     // public function __construct()
     // {
     //     if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
@@ -16,7 +16,6 @@ class AdminMainController extends Controller
 
     public function template($viewName, $bc = '', $data = array())
     {
-
         $view = $this->view('admin/template');
         $view->bind('viewName', $viewName);
         $view->bind('breadcrumb', $bc);

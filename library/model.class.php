@@ -1,60 +1,91 @@
 <?php
+
+#[\AllowDynamicProperties]
 class Model
 {
     protected $_dbhandle;
     protected $_table;
 
-    //koneksi Database
+    // koneksi Database
     public function connect()
     {
-        $this->_dbhandle = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+        mysqli_report(MYSQLI_REPORT_OFF);
 
-        if (mysqli_connect_errno()) {
-            echo "Failed to connect Database: " . mysqli_connect_error();
+        try {
+            $this->_dbhandle = @mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+        } catch (\Throwable $e) {
+            $this->_dbhandle = false;
+        }
+
+        if (!$this->_dbhandle || mysqli_connect_errno()) {
+            $this->_dbhandle = false;
         }
     }
 
-    //proses query
+    // proses query
     public function query($query)
     {
-        return mysqli_query($this->_dbhandle, $query);
+        if (!$this->_dbhandle) {
+            return false;
+        }
+        try {
+            return @mysqli_query($this->_dbhandle, $query);
+        } catch (\Throwable $e) {
+            return false;
+        }
     }
+
     public function getResult($mysqliQuery)
     {
         $data = array();
-        while ($record = mysqli_fetch_array($mysqliQuery)) {
-            array_push($data, $record);
+        if ($mysqliQuery && $mysqliQuery instanceof mysqli_result) {
+            while ($record = mysqli_fetch_array($mysqliQuery, MYSQLI_BOTH)) {
+                array_push($data, $record);
+            }
         }
         return $data;
     }
+
     public function getRows($mysqliQuery)
     {
-        return mysqli_num_rows($mysqliQuery);
+        if ($mysqliQuery && $mysqliQuery instanceof mysqli_result) {
+            return mysqli_num_rows($mysqliQuery);
+        }
+        return 0;
     }
+
     public function getError()
     {
+        if (!$this->_dbhandle) {
+            return 'No database connection';
+        }
         return mysqli_error($this->_dbhandle);
     }
+
     public function getId()
     {
+        if (!$this->_dbhandle) {
+            return 0;
+        }
         return mysqli_insert_id($this->_dbhandle);
     }
 
-    //methode menampilkan data
+    // methode menampilkan data
     public function selectAll($orderBy = '', $order = 'ASC', $limit = '')
     {
-        $query = "SELECT*FROM " . $this->_table;
+        $query = "SELECT * FROM " . $this->_table;
 
         if ($orderBy != '') $query .= " ORDER BY $orderBy $order";
         if ($limit != '') $query .= " LIMIT $limit";
 
         return $this->query($query);
     }
+
     public function selectWhere($condition = array(), $orderBy = '', $order = 'ASC', $limit = '')
     {
-        $query = "SELECT*FROM " . $this->_table;
+        $query = "SELECT * FROM " . $this->_table;
 
-        if (is_array($condition)) {
+        if (is_array($condition) && !empty($condition)) {
             $query .= " WHERE";
             foreach ($condition as $key => $value) {
                 $query .= " $key='$value' AND";
@@ -67,11 +98,12 @@ class Model
 
         return $this->query($query);
     }
+
     public function selectLike($condition = '', $orderBy = '', $order = 'ASC', $limit = '')
     {
-        $query = "SELECT*FROM " . $this->_table;
+        $query = "SELECT * FROM " . $this->_table;
 
-        if (is_array($condition)) {
+        if (is_array($condition) && !empty($condition)) {
             $query .= " WHERE";
             foreach ($condition as $key => $value) {
                 $query .= " $key LIKE '$value' OR";
@@ -84,21 +116,26 @@ class Model
 
         return $this->query($query);
     }
-    public function selectJoin($table = null, $join = "JOIN", $param = null, $condition = '', $orderBy = '', $order = 'ASC', $limit = '')
+
+    public function selectJoin($table = null, $join = "JOIN", $param = array(), $condition = '', $orderBy = '', $order = 'ASC', $limit = '')
     {
-        $query = "SELECT*FROM " . $this->_table;
+        $query = "SELECT * FROM " . $this->_table;
 
         if (is_array($table)) {
             foreach ($table as $tbl) {
                 $query .= " $join $tbl";
             }
-        } else $query .= " $join $table";
-
-        foreach ($param as $key => $value) {
-            $query .= " ON $key=$value";
+        } elseif (!empty($table)) {
+            $query .= " $join $table";
         }
 
-        if (is_array($condition)) {
+        if (is_array($param)) {
+            foreach ($param as $key => $value) {
+                $query .= " ON $key=$value";
+            }
+        }
+
+        if (is_array($condition) && !empty($condition)) {
             $query .= " WHERE";
             foreach ($condition as $key => $value) {
                 $query .= " $key='$value' AND";
@@ -112,12 +149,12 @@ class Model
         return $this->query($query);
     }
 
-    //methode hapus
+    // methode hapus
     public function delete($condition)
     {
         $query = "DELETE FROM " . $this->_table;
 
-        if (is_array($condition)) {
+        if (is_array($condition) && !empty($condition)) {
             $query .= " WHERE";
 
             foreach ($condition as $key => $value) {
@@ -129,30 +166,34 @@ class Model
         return $this->query($query);
     }
 
-    //methode tamnbah data
+    // methode tambah data
     public function insert($data)
     {
         $query = "INSERT INTO " . $this->_table . " SET";
 
-        foreach ($data as $key => $value) {
-            $query .= " $key='$value',";
+        if (is_array($data)) {
+            foreach ($data as $key => $value) {
+                $query .= " $key='$value',";
+            }
+            $query = substr($query, 0, -1);
         }
-        $query = substr($query, 0, -1);
 
         return $this->query($query);
     }
 
-    //methode edit data
+    // methode edit data
     public function update($data, $condition)
     {
         $query = "UPDATE " . $this->_table . " SET";
 
-        foreach ($data as $key => $value) {
-            $query .= " $key='$value',";
+        if (is_array($data)) {
+            foreach ($data as $key => $value) {
+                $query .= " $key='$value',";
+            }
+            $query = substr($query, 0, -1);
         }
-        $query = substr($query, 0, -1);
 
-        if (is_array($condition)) {
+        if (is_array($condition) && !empty($condition)) {
             $query .= " WHERE";
 
             foreach ($condition as $key => $value) {

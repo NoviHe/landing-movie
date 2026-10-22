@@ -2,6 +2,7 @@
 
 use application\controllers\MainController;
 
+#[\AllowDynamicProperties]
 class RequestController extends MainController
 {
     public function index()

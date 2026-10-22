@@ -1,5 +1,7 @@
 <?php
 require_once(ROOT . '/application/functions/functions_html.php');
+
+#[\AllowDynamicProperties]
 class TMDB
 {
     const _API_URL_ = "https://api.themoviedb.org/3/";
@@ -16,7 +18,7 @@ class TMDB
         $this->setLang($lang);
 
         // Set the debug mode
-        $this->_debug = '';
+        $this->_debug = $debug ? 'debug' : '';
     }
 
     function _get($url)
@@ -45,26 +47,31 @@ class TMDB
                     CURLOPT_TIMEOUT => 30,
                     CURLOPT_HTTPHEADER => $header,
                     CURLOPT_USERAGENT => "Mozilla/" . rand(3, 5) . "." . rand(0, 3) . " (Windows NT " . rand(3, 5) . "." . rand(0, 2) . "; rv:2.0.1) Gecko/20100101 Firefox/" . rand(3, 5) . ".0.1"
-                ),
+                )
             );
 
             $url_get_contents_data = curl_exec($curl);
-            curl_close($curl);
-            if ($url_get_contents_data == false) {
+            unset($curl);
+            if ($url_get_contents_data === false) {
                 $curl = curl_init();
                 curl_setopt_array($curl, array(
-                    CURLOPT_RETURNTRANSFER => false,
+                    CURLOPT_RETURNTRANSFER => 1,
                     CURLOPT_HEADER => 0,
                     CURLOPT_URL => $url,
                 ));
                 $url_get_contents_data = curl_exec($curl);
-                curl_close($curl);
+                unset($curl);
             }
         } elseif (function_exists('file_get_contents')) {
             $url_get_contents_data = @file_get_contents($url);
         } elseif (function_exists('fopen') && function_exists('stream_get_contents')) {
-            $handle = fopen($url, "r");
-            $url_get_contents_data = stream_get_contents($handle);
+            $handle = @fopen($url, "r");
+            if ($handle) {
+                $url_get_contents_data = stream_get_contents($handle);
+                fclose($handle);
+            } else {
+                $url_get_contents_data = false;
+            }
         } else {
             $url_get_contents_data = false;
         }
@@ -83,7 +90,7 @@ class TMDB
 
     public function setLang($lang = 'en'): void
     {
-        $this->_lang = $lang;
+        $this->_lang = (string)$lang;
     }
 
     public function getLang(): string
@@ -96,14 +103,21 @@ class TMDB
         $url = self::_API_URL_ . $action . '?api_key=' . $this->getApikey() . '&' . $appendToResponse;
 
         $contents = $this->_get($url);
-        $results = mb_convert_encoding($contents, "HTML-ENTITIES", "UTF-8");
+
         if ($this->_debug == 'debug') {
             echo '<pre>';
             print_r($url);
             echo '</pre>';
         }
 
-        return json_decode(($results), true);
+        if (!$contents) {
+            return [];
+        }
+
+        $results = mb_convert_encoding($contents, 'UTF-8', 'UTF-8');
+        $decoded = json_decode($results, true);
+
+        return is_array($decoded) ? $decoded : [];
     }
 
     public function getPopularMovies($page = 1): array
@@ -120,37 +134,41 @@ class TMDB
     {
         return $this->_call('movie/top_rated', 'page=' . $page);
     }
+
     public function getUpcomingMovies($page = 1): array
     {
         return $this->_call('movie/upcoming', 'page=' . $page);
     }
-    public function getGenreMovies($id, $page = 1)
+
+    public function getGenreMovies($id, $page = 1): array
     {
         return $this->_call('genre/' . $id . '/movies', 'page=' . $page);
     }
-
 
     public function getLatestTVShow($page = 1): array
     {
         return $this->_call('tv/latest', 'page=' . $page);
     }
+
     public function getTopRatedTVShows($page = 1): array
     {
         return $this->_call('tv/top_rated', 'page=' . $page);
     }
+
     public function getPopularTVShows($page = 1): array
     {
         return $this->_call('tv/popular', 'page=' . $page);
     }
+
     public function getOnTheAirTVShows($page = 1): array
     {
         return $this->_call('tv/on_the_air', 'page=' . $page);
     }
+
     public function getAiringTodayTVShows($page = 1): array
     {
         return $this->_call('tv/airing_today', 'page=' . $page);
     }
-
 
     public function getMovie($idMovie, $appendToResponse = 'append_to_response=trailers,images,credits,translations,similar_movies,alternative_titles,keywords'): array
     {
@@ -161,19 +179,19 @@ class TMDB
     {
         return $this->_call('tv/' . $idTVShow, $appendToResponse);
     }
+
     public function getTVSeason($idTVShow, $season = '', $appendToResponse = 'append_to_response=trailers,images,credits,translations,alternative_titles,keywords'): array
     {
         return $this->_call('tv/' . $idTVShow . $season, $appendToResponse);
     }
 
-
     public function searchMovie($movieTitle, $page = 1): array
     {
-        return $this->_call('search/movie', 'query=' . urlencode($movieTitle) . '&page=' . $page, $this->getLang());
+        return $this->_call('search/movie', 'query=' . urlencode((string)$movieTitle) . '&page=' . $page, $this->getLang());
     }
 
     public function searchTv($tvTitle, $page = 1): array
     {
-        return $this->_call('search/tv', 'query=' . urlencode($tvTitle) . '&page=' . $page, $this->getLang());
+        return $this->_call('search/tv', 'query=' . urlencode((string)$tvTitle) . '&page=' . $page, $this->getLang());
     }
 }

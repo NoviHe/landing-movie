@@ -1,4 +1,4 @@
-<?php header('Access-Control-Allow-Origin: *'); //for all 
+<?php if (!headers_sent()) { header('Access-Control-Allow-Origin: *'); } //for all 
 ?>
 <!doctype html>
 <html lang="en" data-bs-theme="dark">

@@ -1,4 +1,6 @@
 <?php
+
+#[\AllowDynamicProperties]
 class AdminModel extends Model
 {
     public function __construct()

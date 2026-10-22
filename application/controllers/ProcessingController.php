@@ -2,6 +2,7 @@
 
 use application\controllers\MainController;
 
+#[\AllowDynamicProperties]
 class ProcessingController extends MainController
 {
     public function index()

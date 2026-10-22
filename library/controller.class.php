@@ -1,4 +1,6 @@
 <?php
+
+#[\AllowDynamicProperties]
 class Controller
 {
     protected function view($viewName)
@@ -22,17 +24,21 @@ class Controller
 
     public function back()
     {
-        echo '<script>histori.go(-1)</script>';
+        echo '<script>history.go(-1)</script>';
     }
 
     public function redirect($url = "")
     {
-        header('location: ' . BASE_PATH . DS . $url);
+        header('location: ' . BASE_PATH . '/' . ltrim((string)$url, '/\\'));
+        exit;
     }
 
     public function validate($data)
     {
-        return htmlentities(trim(strip_tags($data)));
+        if ($data === null) {
+            return '';
+        }
+        return htmlentities(trim(strip_tags((string)$data)), ENT_QUOTES, 'UTF-8');
     }
 
     protected function api($apiModelName)

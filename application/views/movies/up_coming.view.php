@@ -1,7 +1,7 @@
 <div class="jumbo-hero" style="background-image:url(<?= BASE_PATH ?>/public/images/bg.jpg)">
     <div class="container">
         <div class="jumbo-hero__inner">
-            <h1 class="header">Upcoming Movies <?php echo $data['pages']; ?></h1>
+            <h1 class="header">Upcoming Movies <?php echo htmlspecialchars($data['pages'] ?? ''); ?></h1>
         </div>
     </div>
 </div>
@@ -10,14 +10,16 @@
     <div class="container">
         <div class="row">
             <?php
-            $movies = unserialize($data['data']);
-            if (is_array($movies['result'])) :
-                foreach ((array)$movies['result'] as $row) : ?>
+            $movies = !empty($data['data']) ? @unserialize($data['data']) : false;
+            if (is_array($movies) && !empty($movies['result']) && is_array($movies['result'])) :
+                foreach ((array)$movies['result'] as $row) : 
+                    $year = !empty($row['release_date']) ? date('Y', strtotime($row['release_date'])) : '';
+                ?>
                     <article id="<?= $row['id']; ?>" class="item col-6 col-md-3">
                         <div class="thumb mb-4">
-                            <a href="<?= url_movie($row['id'], $row['title']) ?>" rel="bookmark" title="<?= $row['title']; ?> (<?php echo date('Y', strtotime($row['release_date'])); ?>)">
+                            <a href="<?= url_movie($row['id'], $row['title']) ?>" rel="bookmark" title="<?= htmlspecialchars($row['title']); ?> (<?= $year; ?>)">
                                 <div class="_img_holder">
-                                    <img class="img-fluid rounded" src="<?= $row['poster_path']; ?>?resize=300,450" alt="Image <?= $row['title']; ?>" title="Image <?= $row['title']; ?> (<?php echo date('Y', strtotime($row['release_date'])); ?>)">
+                                    <img class="img-fluid rounded" src="<?= $row['poster_path']; ?>?resize=300,450" alt="Image <?= htmlspecialchars($row['title']); ?>" title="Image <?= htmlspecialchars($row['title']); ?> (<?= $year; ?>)">
                                     <div class="_overlay_link">
                                         <button class="play-button play-button--small" type="button"></button>
                                         <div class="rate"><i class="fa fa-star text-warning"></i> <span class="small text-white"><?= $row['vote_average']; ?>/10</span></div>
@@ -26,7 +28,7 @@
                             </a>
                             <header class="entry-header">
                                 <h2 class="entry-title">
-                                    <a href="<?= url_movie($row['id'], $row['title']) ?>" class="_title" rel="bookmark" title="<?= $row['title']; ?> (<?php echo date('Y', strtotime($row['release_date'])); ?>)"><?= $row['title']; ?> (<?php echo date('Y', strtotime($row['release_date'])); ?>)</a>
+                                    <a href="<?= url_movie($row['id'], $row['title']) ?>" class="_title" rel="bookmark" title="<?= htmlspecialchars($row['title']); ?> (<?= $year; ?>)"><?= htmlspecialchars($row['title']); ?> (<?= $year; ?>)</a>
                                 </h2>
                             </header>
                         </div>
@@ -37,22 +39,20 @@
         <div class="row">
             <div class="col-12 text-center pagenate">
                 <ul class="pagination" role="navigation">
-                    <?php if ($data['page'] == 1) : ?>
+                    <?php if (($data['page'] ?? 1) == 1) : ?>
                         <li class="page-item disabled" aria-disabled="true">
                             <span class="page-link">&lsaquo; Prev</span>
                         </li>
                     <?php else : ?>
                         <li class="page-item">
-                            <a class="page-link" href="<?= URL_WEBSITE ?>/movie/up_coming/<?= $data['page'] - 1; ?>" rel="next">&lsaquo; Prev</a>
+                            <a class="page-link" href="<?= URL_WEBSITE ?>/movie/up_coming/<?= ($data['page'] - 1); ?>" rel="next">&lsaquo; Prev</a>
                         </li>
                     <?php endif; ?>
 
-
                     <li class="page-item">
-                        <a class="page-link" href="<?= URL_WEBSITE ?>/movie/up_coming/<?= $data['page'] + 1; ?>" rel="next">Next &rsaquo;</a>
+                        <a class="page-link" href="<?= URL_WEBSITE ?>/movie/up_coming/<?= (($data['page'] ?? 1) + 1); ?>" rel="next">Next &rsaquo;</a>
                     </li>
                 </ul>
-
             </div>
         </div>
     </div>

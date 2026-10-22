@@ -2,9 +2,9 @@
 
 use application\controllers\MainController;
 
+#[\AllowDynamicProperties]
 class HomeController extends MainController
 {
-
     function __construct()
     {
         $this->api('tmdb');
@@ -27,7 +27,7 @@ class HomeController extends MainController
     {
         if (!empty($id)) {
             $data = $this->tmdb->getDataGenre($id, 'getGenreMovies', 'genre_' . $id . '_', $page);
-            $hack_title = ucwords($dirName) . ' Movies | ' . SITE_NAME;
+            $hack_title = ucwords((string)$dirName) . ' Movies | ' . SITE_NAME;
             $pages = ($page != 1) ? ' Pages ' . $page : '';
             $this->template('category', array(
                 'genres' => $data,
@@ -53,41 +53,22 @@ class HomeController extends MainController
 
     public function dmca_notice()
     {
-        $hack_title = 'DMCA Notice | ' . SITE_NAME;
-        $hack_description = "If you believe that your copyrighted work has been copied in a way that constitutes copyright infringement and is accessible on this site.";
-
         $this->template('page/dmca_notice', array(
-            'hack_title' => $hack_title,
-            'hack_description' => $hack_description,
+            'hack_title' => 'DMCA Notice | ' . SITE_NAME,
         ));
     }
 
     public function privacy_policy()
     {
-        $hack_title = 'Privacy Policy | ' . SITE_NAME;
-        $hack_description = "If you require any more information or have any questions about our privacy policy, please feel free to contact us by email at info@" . SITES_URL . '.';
-
         $this->template('page/privacy_policy', array(
-            'hack_title' => $hack_title,
-            'hack_description' => $hack_description,
+            'hack_title' => 'Privacy Policy | ' . SITE_NAME,
         ));
     }
 
     public function contact_us()
     {
-        $hack_title = 'Contact Us | ' . SITE_NAME;
-        $hack_description = "Please feel free to contact us using the form below.";
-
         $this->template('page/contact_us', array(
-            'hack_title' => $hack_title,
-            'hack_description' => $hack_description,
+            'hack_title' => 'Contact Us | ' . SITE_NAME,
         ));
-    }
-    
-    public function loading()
-    {
-        $sub_id = !empty($_GET['sub_id']) ? $_GET['sub_id'] : '';
-        $view = $this->view('register');
-        $view->bind('sub_id', $sub_id);
     }
 }

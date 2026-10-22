@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?= $hack_title ?></title>
+    <title><?= $hack_title ?? SITE_NAME ?></title>
     <link rel="shortcut icon" href="<?= BASE_PATH . '/public/img/' . FAVICON ?>">
-    <meta name="description" content="<?= $hack_description; ?>">
-    <meta name="keywords" content="<?= $hack_keywords; ?>" />
+    <meta name="description" content="<?= $hack_description ?? SITE_DESCRIPTION; ?>">
+    <meta name="keywords" content="<?= $hack_keywords ?? SITE_KEYWORDS; ?>" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="author" content="NviReview">
     <link rel="profile" href="http://gmpg.org/xfn/11">
@@ -17,14 +17,14 @@
     ?>
 
     <meta property="og:locale" content="en_US">
-    <meta property="og:title" content="<?= $hack_title; ?>" />
-    <meta property="og:description" content="<?= $hack_description; ?>">
+    <meta property="og:title" content="<?= $hack_title ?? SITE_NAME; ?>" />
+    <meta property="og:description" content="<?= $hack_description ?? SITE_DESCRIPTION; ?>">
     <meta property="og:type" content="website" />
     <meta property="og:author" content="NviReview">
     <meta property="og:site_name" content="<?= SITE_NAME ?>">
     <meta property="og:url" content="<?= curent_url() ?>" />
-    <?php if (!is_null($hack_images)) : ?>
-        <meta property="og:image" content="<?php echo $hack_images ?>" />
+    <?php if (!empty($hack_images)) : ?>
+        <meta property="og:image" content="<?php echo htmlspecialchars($hack_images) ?>" />
     <?php endif; ?>
     <meta content='100262439001789' property='fb:admins' />
     <meta content='3664215543855179' property='fb:app_id' />
@@ -123,8 +123,8 @@
                     </div>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">TV Shows <i class="fa fa-angle-down" aria-hidden="true"></i></a>
-                    <div class="dropdown-menu mop" aria-labelledby="dropdown04">
+                    <a class="nav-link" href="#" id="dropdown04_tv" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">TV Shows <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                    <div class="dropdown-menu mop" aria-labelledby="dropdown04_tv">
                         <div class="row">
                             <div class="col-12">
                                 <a class="dropdown-item" href="<?= URL_WEBSITE ?>/tv/airing_today">Airing</a>
@@ -135,8 +135,8 @@
                     </div>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Genres <i class="fa fa-angle-down" aria-hidden="true"></i></a>
-                    <div class="dropdown-menu px-3" aria-labelledby="dropdown04">
+                    <a class="nav-link" href="#" id="dropdown04_genres" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Genres <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                    <div class="dropdown-menu px-3" aria-labelledby="dropdown04_genres">
                         <div class="row">
                             <div class="col-6 px-0">
                                 <a class="dropdown-item" href="<?= URL_WEBSITE ?>/home/genre/28/action" title="Action">Action</a>
@@ -179,7 +179,7 @@
                     <button class="btn btn-outline-theme ml-md-3 mb-3 mb-md-0 sign-in">Sign In</button>
                 </li>
                 <li class="nav-item">
-                    <a href="/request" class="btn btn-theme ml-md-3">Register</i></a>
+                    <a href="/request" class="btn btn-theme ml-md-3">Register</a>
                 </li>
             </ul>
         </div>
@@ -187,7 +187,7 @@
 
     <?php
     $view = new View($viewName);
-    $view->bind('data', $data);
+    $view->bind('data', $data ?? []);
 
     $view->render();
     ?>
@@ -195,7 +195,7 @@
     <footer class="footer">
         <div class="container">
             <div class="footer_wrapper d-flex flex-column flex-md-row">
-                <div class="copyright">Copyright © <?php echo date('Y') ?> <span class="text-capitalize"><?= $_SERVER['HTTP_HOST'] ?></span> | All rights
+                <div class="copyright">Copyright © <?php echo date('Y') ?> <span class="text-capitalize"><?= htmlspecialchars($_SERVER['HTTP_HOST'] ?? 'nvireview.com') ?></span> | All rights
                     reserved</div>
                 <div class="footer_links">
                     <a href="/home/dmca_notice">DMCA</a>

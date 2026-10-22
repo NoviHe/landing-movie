@@ -1,10 +1,26 @@
 <?php
-$nowPlaying = $data['nowPlaying'];
-$data = $data['data'];
-$row = $data['row'];
+$nowPlaying = $data['nowPlaying'] ?? '';
+$data = $data['data'] ?? [];
+$movieRow = $data['row'] ?? [];
 $bg = array(BASE_PATH . '/public/videos/film.mp4'); // array of filenames
 $i = rand(0, count($bg) - 1); // generate random number size of the array
 $selectedBg = "$bg[$i]"; // set variable equal to which random filename was chosen
+
+$movieId = $movieRow['id'] ?? ($data['id'] ?? '');
+$movieTitle = $data['title'] ?? ($movieRow['title'] ?? '');
+$movieYear = $data['year'] ?? '';
+$movieImages = $data['images'] ?? (BASE_PATH . '/public/images/no-backdrop.png');
+$movieImagesSmall = $data['images_small'] ?? (BASE_PATH . '/public/images/no-cover.png');
+$movieRating = (int)($data['get_rating'] ?? 0);
+$empRating = (int)($data['emp_rating'] ?? 10);
+$voteCount = $data['vote_count'] ?? 0;
+$movieDesc = $data['description'] ?? '';
+$movieReleaseDate = !empty($data['release_date']) ? date('M d, Y', strtotime($data['release_date'])) : '';
+$movieRuntime = $data['runtime'] ?? 0;
+$movieGenre = $data['genre'] ?? '';
+$movieCast = $data['cast'] ?? '';
+$movieCompanies = $data['companies'] ?? '';
+$subId = htmlspecialchars($_GET["sub_id"] ?? '');
 ?>
 <style>
     .embed-mupi {
@@ -20,7 +36,7 @@ $selectedBg = "$bg[$i]"; // set variable equal to which random filename was chos
     }
 </style>
 <section class="px-4r">
-    <div class="backdrop" style="background-image: url(<?= $data['images'] ?>)"></div>
+    <div class="backdrop" style="background-image: url(<?= $movieImages ?>)"></div>
     <div class="container">
         <div id="player-1" class="row">
             <div class="col-lg-12 d-flex justify-content-center">
@@ -52,20 +68,8 @@ $selectedBg = "$bg[$i]"; // set variable equal to which random filename was chos
                     document.write(y);
                 </script>
             </div>
-            <!-- <iframe class="embed-mupi" src="https://www.2embed.cc/embed/<?= $row['id']; ?>"  frameborder="0" scrolling="no" allowfullscreen></iframe> -->
-            <iframe class="embed-mupi" src="https://filmku.online/embed/<?= $row['id']; ?>" frameborder="0" scrolling="no" allowfullscreen></iframe>
-            <!-- <iframe class="embed-mupi" src="https://vidsrc.pro/embed/movie/<?= $row['id']; ?>" frameborder="0" scrolling="no" allowfullscreen></iframe> -->
-            <!-- <div class="embed-responsive embed-responsive-16by9"> -->
-            <!-- <video id="play-video" class="video-js vjs-16-9 vjs-big-play-centered" controls="" preload="none" width="600" height="315" poster="<?= $data['images'] ?>" data-setup="" webkit-playsinline="true" playsinline="true">
-                    <source src="<?= $selectedBg; ?>" type="video/mp4" label="SD">
-                    <source src="<?= $selectedBg; ?>" type="video/mp4" label="HD">
-                    <track kind="subtitles" src="" srclang="en" label="English">
-                    <track kind="subtitles" src="" srclang="fr" label="French">
-                    <track kind="subtitles" src="" srclang="de" label="Germany">
-                    <track kind="subtitles" src="" srclang="nl" label="Netherland">
-                    <track kind="subtitles" src="" srclang="it" label="Italy">
-                </video> -->
-            <!-- </div> -->
+            <!-- <iframe class="embed-mupi" src="https://www.2embed.cc/embed/<?= $movieId; ?>" frameborder="0" scrolling="no" allowfullscreen></iframe> -->
+            <iframe class="embed-mupi" src="https://filmku.online/embed/<?= $movieId; ?>" frameborder="0" scrolling="no" allowfullscreen></iframe>
             <div class="col-sm-12 d-flex justify-content-center">
                 <script>
                     var y = "";
@@ -77,9 +81,6 @@ $selectedBg = "$bg[$i]"; // set variable equal to which random filename was chos
                 </script>
             </div>
         </div>
-        <!-- <script>
-            var playDuration = 129 * 60;
-        </script> -->
     </div>
     <div class="container py-4">
         <div class="row my-2">
@@ -96,8 +97,8 @@ $selectedBg = "$bg[$i]"; // set variable equal to which random filename was chos
         </div>
         <div class="row">
             <div class="col d-flex justify-content-center">
-                <a href="/home/loading&id=<?php echo $row['id']; ?>&amp;title=<?php echo $data['title']; ?>&s1=<?php echo '' . htmlspecialchars(isset($_GET["sub_id"]) ? $_GET['sub_id'] : '') . $data['title']; ?>" class="btn btn-outline-theme mx-1">Watch Now <i class="fa fa-film" aria-hidden="true"></i></a>
-                <a href="/home/loading&id=<?php echo $row['id']; ?>&amp;title=<?php echo $data['title']; ?>&s1=<?php echo '' . htmlspecialchars(isset($_GET["sub_id"]) ? $_GET['sub_id'] : '') . $data['title']; ?>" class="btn btn-outline-theme mx-1">Download <i class="fa fa-cloud-download" aria-hidden="true"></i></a>
+                <a href="/home/loading&id=<?= urlencode((string)$movieId); ?>&amp;title=<?= urlencode((string)$movieTitle); ?>&s1=<?= $subId . urlencode((string)$movieTitle); ?>" class="btn btn-outline-theme mx-1">Watch Now <i class="fa fa-film" aria-hidden="true"></i></a>
+                <a href="/home/loading&id=<?= urlencode((string)$movieId); ?>&amp;title=<?= urlencode((string)$movieTitle); ?>&s1=<?= $subId . urlencode((string)$movieTitle); ?>" class="btn btn-outline-theme mx-1">Download <i class="fa fa-cloud-download" aria-hidden="true"></i></a>
             </div>
         </div>
     </div>
@@ -107,39 +108,38 @@ $selectedBg = "$bg[$i]"; // set variable equal to which random filename was chos
         <div class="col-12">
             <div class="row">
                 <div class="col-md-2 col-sm-4 col-3">
-                    <img class="img-fluid" src="<?php echo $data['images_small']; ?>?resize=300,450" alt="Poster <?php echo $data['title']; ?> <?php echo $data['year']; ?>" title="Poster <?php echo $data['title']; ?> <?php echo $data['year']; ?>">
+                    <img class="img-fluid" src="<?= $movieImagesSmall; ?>?resize=300,450" alt="Poster <?= htmlspecialchars($movieTitle); ?> <?= $movieYear; ?>" title="Poster <?= htmlspecialchars($movieTitle); ?> <?= $movieYear; ?>">
                 </div>
                 <div class="col-md-10 col-sm-8 col-9">
                     <div class="entry-title d-flex flex-column-reverse flex-md-row justify-content-between">
-                        <h1 class="h2"><?php echo $data['title']; ?> <span class="tiny text-muted"><?php echo $data['year']; ?></span></h1>
+                        <h1 class="h2"><?= htmlspecialchars($movieTitle); ?> <span class="tiny text-muted"><?= $movieYear; ?></span></h1>
                         <div class="sub-r">
-                            <a href="/request&id=<?php echo $row['id']; ?>&amp;title=<?php echo $data['title']; ?>&sub_id=<?php echo '' . htmlspecialchars(isset($_GET["sub_id"]) ? $_GET['sub_id'] : '') . $data['title']; ?>" class="btn subs">Subscribe to Watch | $0.00</a>
+                            <a href="/request&id=<?= urlencode((string)$movieId); ?>&amp;title=<?= urlencode((string)$movieTitle); ?>&sub_id=<?= $subId . urlencode((string)$movieTitle); ?>" class="btn subs">Subscribe to Watch | $0.00</a>
                         </div>
                     </div>
                     <div class="entry-info mb-3">
                         <div class="__rate">
-                            <?php for ($k = 1; $k <= $data['get_rating']; $k++) : ?>
+                            <?php for ($k = 1; $k <= $movieRating; $k++) : ?>
                                 <i class="fa fa-star text-warning"></i>
                             <?php endfor; ?>
-                            <?php for ($i = $data['emp_rating']; $i >= 1; $i--) : ?>
+                            <?php for ($i = $empRating; $i >= 1; $i--) : ?>
                                 <i class="fa fa-star-o text-muted"></i>
-                                <?php $k++; ?>
                             <?php endfor; ?>
                         </div>
                         <div class="__info">
-                            <span class="text-muted small"><?php echo $data['get_rating']; ?>/10</span> <span class="text-muted small">by <?php echo $data['vote_count']; ?> users</span>
+                            <span class="text-muted small"><?= $movieRating; ?>/10</span> <span class="text-muted small">by <?= $voteCount; ?> users</span>
                         </div>
                     </div>
                     <div class="entry-desciption text-muted">
-                        <p><?php echo $data['description']; ?></p>
+                        <p><?= htmlspecialchars($movieDesc); ?></p>
                     </div>
                     <div class="entry-table">
                         <ul>
-                            <li>Released: <span><?php echo date('M d, Y', strtotime($data['release_date'])); ?></span></li>
-                            <li>Runtime: <span><?php echo $data['runtime']; ?> minutes</span></li>
-                            <li>Genre: <span><?php echo $data['genre']; ?></span></li>
-                            <li>Stars: <span><?php echo $data['cast']; ?></span></li>
-                            <li>Production Company: <span><?php echo $data['companies']; ?></span></li>
+                            <li>Released: <span><?= $movieReleaseDate; ?></span></li>
+                            <li>Runtime: <span><?= $movieRuntime; ?> minutes</span></li>
+                            <li>Genre: <span><?= $movieGenre; ?></span></li>
+                            <li>Stars: <span><?= $movieCast; ?></span></li>
+                            <li>Production Company: <span><?= $movieCompanies; ?></span></li>
                         </ul>
                     </div>
                 </div>
@@ -200,24 +200,26 @@ $selectedBg = "$bg[$i]"; // set variable equal to which random filename was chos
         <div class="owl-stage-outer">
             <div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s; width: 1440px;">
                 <?php
-                $movies = unserialize($nowPlaying);
-                if (is_array($movies['result'])) :
-                    foreach ((array)array_slice($movies['result'], 0, 20) as $row) : ?>
+                $movies = !empty($nowPlaying) ? @unserialize($nowPlaying) : false;
+                if (is_array($movies) && !empty($movies['result']) && is_array($movies['result'])) :
+                    foreach ((array)array_slice($movies['result'], 0, 20) as $recRow) : 
+                        $recYear = !empty($recRow['release_date']) ? date('Y', strtotime($recRow['release_date'])) : '';
+                    ?>
                         <div class="owl-item active" style="width: 150px; margin-right: 30px;">
-                            <article id="<?= $row['id']; ?>" class="item ">
+                            <article id="<?= $recRow['id']; ?>" class="item ">
                                 <div class="thumb mb-4">
-                                    <a href="<?= url_movie($row['id'], $row['title']) ?>" rel="bookmark" title="<?= $row['title']; ?> (<?php echo date('Y', strtotime($row['release_date'])); ?>)">
+                                    <a href="<?= url_movie($recRow['id'], $recRow['title']) ?>" rel="bookmark" title="<?= htmlspecialchars($recRow['title']); ?> (<?= $recYear; ?>)">
                                         <div class="_img_holder">
-                                            <img class="img-fluid rounded" src="<?= $row['poster_path']; ?>?resize=300,450" alt="Image <?= $row['title']; ?>" title="Image <?= $row['title']; ?> (<?php echo date('Y', strtotime($row['release_date'])); ?>)">
+                                            <img class="img-fluid rounded" src="<?= $recRow['poster_path']; ?>?resize=300,450" alt="Image <?= htmlspecialchars($recRow['title']); ?>" title="Image <?= htmlspecialchars($recRow['title']); ?> (<?= $recYear; ?>)">
                                             <div class="_overlay_link">
                                                 <button class="play-button play-button--small" type="button"></button>
-                                                <div class="rate"><i class="fa fa-star text-warning"></i> <span class="small text-white"><?= $row['vote_average']; ?>/10</span></div>
+                                                <div class="rate"><i class="fa fa-star text-warning"></i> <span class="small text-white"><?= $recRow['vote_average']; ?>/10</span></div>
                                             </div>
                                         </div>
                                     </a>
                                     <header class="entry-header">
                                         <h2 class="entry-title">
-                                            <a href="<?= url_movie($row['id'], $row['title']) ?>" class="_title" rel="bookmark" title="<?= $row['title']; ?> (<?php echo date('Y', strtotime($row['release_date'])); ?>)"><?= $row['title']; ?> (<?php echo date('Y', strtotime($row['release_date'])); ?>)</a>
+                                            <a href="<?= url_movie($recRow['id'], $recRow['title']) ?>" class="_title" rel="bookmark" title="<?= htmlspecialchars($recRow['title']); ?> (<?= $recYear; ?>)"><?= htmlspecialchars($recRow['title']); ?> (<?= $recYear; ?>)</a>
                                         </h2>
                                     </header>
                                 </div>
@@ -235,14 +237,14 @@ $selectedBg = "$bg[$i]"; // set variable equal to which random filename was chos
 <div id="modal-watch" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
-            <div class="modal-body mopie-modal-content p-0 border" style="background-image: url('<?php echo $data['images']; ?>')">
+            <div class="modal-body mopie-modal-content p-0 border" style="background-image: url('<?= $movieImages; ?>')">
                 <div class="align-items-center d-flex flex-column justify-content-center position-relative p-3 pt-5 text-center">
                     <div class="ex-icon">
                         <i class="fa fa-exclamation fa-4x" aria-hidden="true"></i>
                     </div>
                     <div class="h3 font-bold mt-3">Activate your FREE Account!</div>
                     <p>You must create an account to continue watching</p>
-                    <a href="/loading&id=<?php echo $row['id']; ?>&amp;title=<?php echo $data['title']; ?>" class="btn btn-lg bg-theme bg-hover-theme mb-4">Continue to watch for FREE ➞</a>
+                    <a href="/loading&id=<?= urlencode((string)$movieId); ?>&amp;title=<?= urlencode((string)$movieTitle); ?>" class="btn btn-lg bg-theme bg-hover-theme mb-4">Continue to watch for FREE ➞</a>
                 </div>
             </div>
             <div class="modal-footer align-items-center d-flex flex-column justify-content-center text-center text-dark">

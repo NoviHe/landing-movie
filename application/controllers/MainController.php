@@ -4,13 +4,11 @@ namespace application\controllers;
 
 use Controller;
 
+#[\AllowDynamicProperties]
 class MainController extends Controller
 {
     public function template($viewName, $data = array())
     {
-        // var_dump($data['hack_title']);
-        // die;
-
         $view = $this->view('template');
         $view->bind('viewName', $viewName);
         $view->bind('data', $data);

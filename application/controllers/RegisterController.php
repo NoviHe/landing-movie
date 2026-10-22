@@ -2,6 +2,7 @@
 
 use application\controllers\MainController;
 
+#[\AllowDynamicProperties]
 class RegisterController extends MainController
 {
     public function index()

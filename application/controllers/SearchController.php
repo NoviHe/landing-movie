@@ -2,6 +2,7 @@
 
 use application\controllers\MainController;
 
+#[\AllowDynamicProperties]
 class SearchController extends MainController
 {
     function __construct()
@@ -12,8 +13,8 @@ class SearchController extends MainController
     public function index()
     {
         if (!empty($_GET['s'])) {
-
-            $newquery = get_search_query($_GET['s']);
+            $rawQuery = is_string($_GET['s']) ? $_GET['s'] : '';
+            $newquery = get_search_query($rawQuery);
             $limit_word = limit_word($newquery, 3);
             $hack_title = 'Search Results for ' . $newquery;
 
@@ -31,7 +32,8 @@ class SearchController extends MainController
     function movies($page = 1)
     {
         if (!empty($_GET['s'])) {
-            $newquery = get_search_query($_GET['s']);
+            $rawQuery = is_string($_GET['s']) ? $_GET['s'] : '';
+            $newquery = get_search_query($rawQuery);
             $limit_word = limit_word($newquery, 3);
             $hack_title = 'Search Results for ' . $newquery;
             $pages = ($page != 1) ? ' Pages ' . $page : '';
@@ -51,7 +53,8 @@ class SearchController extends MainController
     function tv($page = 1)
     {
         if (!empty($_GET['s'])) {
-            $newquery = get_search_query($_GET['s']);
+            $rawQuery = is_string($_GET['s']) ? $_GET['s'] : '';
+            $newquery = get_search_query($rawQuery);
             $limit_word = limit_word($newquery, 3);
             $hack_title = 'Search Results for ' . $newquery;
             $pages = ($page != 1) ? ' Pages ' . $page : '';

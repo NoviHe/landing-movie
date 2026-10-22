@@ -1,4 +1,6 @@
 <?php
+
+#[\AllowDynamicProperties]
 class AdminController extends Controller
 {
     private function getController($controller, $action = '', $parameter = '')
@@ -6,18 +8,24 @@ class AdminController extends Controller
         $controllerPath = ROOT . '/application/controllers/admin/' . ucfirst($controller) . 'Controller.php';
 
         if (file_exists($controllerPath)) {
-
             require_once $controllerPath;
             $controllerName = ucfirst($controller) . "Controller";
-            $object = new $controllerName();
+            if (class_exists($controllerName)) {
+                $object = new $controllerName();
+                $act = (!empty($action)) ? $action : 'index';
+                $param = ($parameter !== '' && $parameter !== null) ? array($parameter) : array();
 
-            $act = ($action != '') ? $action : 'index';
-            $param = array($parameter);
-
-            if (method_exists($controllerName, $act)) {
-                call_user_func_array(array($object, $act), $param);
-            } else die('Action not Found!');
-        } else die('Controller not Found!');
+                if (method_exists($object, $act)) {
+                    call_user_func_array(array($object, $act), $param);
+                } else {
+                    die('Action not Found!');
+                }
+            } else {
+                die('Controller Class not Found!');
+            }
+        } else {
+            die('Controller not Found!');
+        }
     }
 
     public function index()

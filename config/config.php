@@ -7,10 +7,11 @@ define('DEVELOPMENT_ENVIRONMENT', false);
 
 define('BASE_PATH', 'https://nvireview.com');
 define('URL_WEBSITE', 'https://nvireview.com');
-define('DOCUMENT_ROOT', $_SERVER['DOCUMENT_ROOT'] . '/public');
+$docRoot = !empty($_SERVER['DOCUMENT_ROOT']) ? $_SERVER['DOCUMENT_ROOT'] : (defined('ROOT') ? ROOT : dirname(__DIR__));
+define('DOCUMENT_ROOT', rtrim($docRoot, '/\\') . '/public');
 
 define('DEFAULT_CONTROLLER', 'home');
-define('SITES_URL', $_SERVER['HTTP_HOST']);
+define('SITES_URL', $_SERVER['HTTP_HOST'] ?? 'nvireview.com');
 
 define('DB_NAME', 'db_novi'); // Data base Name
 define('DB_USER', 'root');

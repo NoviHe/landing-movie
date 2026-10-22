@@ -2,6 +2,7 @@
 
 use application\controllers\admin\AdminMainController;
 
+#[\AllowDynamicProperties]
 class BuilderController extends AdminMainController
 {
     public function index()

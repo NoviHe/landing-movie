@@ -1,38 +1,38 @@
 <?php
 function load_css($path)
 {
-    echo '<link rel="stylesheet" type="text/css" href="' . BASE_PATH . '/public/' . $path . '">';
+    echo '<link rel="stylesheet" type="text/css" href="' . BASE_PATH . '/public/' . ltrim($path, '/\\') . '">';
 }
 
 function load_script($path)
 {
-    echo '<script type="text/javascript" src="' . BASE_PATH . '/public/' . $path . '"></script>';
+    echo '<script type="text/javascript" src="' . BASE_PATH . '/public/' . ltrim($path, '/\\') . '"></script>';
 }
 
 function url_movie($id, $title)
 {
-    return URL_WEBSITE . '/movie/watch/' . $id . '/' . permalink($title) . URL_END;
+    return URL_WEBSITE . '/movie/watch/' . $id . '/' . permalink((string)$title) . URL_END;
 }
 
 function url_tv($id, $title)
 {
-    return URL_WEBSITE . '/tv/watch/' . $id . '/' . permalink($title) . URL_END;
+    return URL_WEBSITE . '/tv/watch/' . $id . '/' . permalink((string)$title) . URL_END;
 }
 
 function url_cat($id, $query)
 {
-    return URL_WEBSITE . '/home/genre/' .  $id . '/' . $query;
+    return URL_WEBSITE . '/home/genre/' .  $id . '/' . permalink((string)$query);
 }
 
 function url_search($query)
 {
-    return URL_WEBSITE . '/search?s=' . permalink($query);
+    return URL_WEBSITE . '/search?s=' . permalink((string)$query);
 }
 
 function permalink($str, $options = array())
 {
     // Make sure string is in UTF-8 and strip invalid UTF-8 characters
-    $str = mb_convert_encoding((string)$str, 'UTF-8', mb_list_encodings());
+    $str = mb_convert_encoding((string)$str, 'UTF-8', 'UTF-8');
 
     $defaults = array(
         'delimiter' => '-',
@@ -105,10 +105,12 @@ function permalink($str, $options = array())
     );
 
     // Make custom replacements
-    $str = preg_replace(array_keys($options['replacements']), $options['replacements'], $str);
+    if (!empty($options['replacements'])) {
+        $str = preg_replace(array_keys($options['replacements']), $options['replacements'], $str);
+    }
 
     // Transliterate characters to ASCII
-    if ($options['transliterate']) {
+    if (!empty($options['transliterate'])) {
         $str = str_replace(array_keys($char_map), $char_map, $str);
     }
 
@@ -129,27 +131,29 @@ function permalink($str, $options = array())
 
 function get_search_query($query)
 {
-    $newquery = permalink($query);
+    $newquery = permalink((string)$query);
     return trim(str_replace('-', ' ', $newquery));
 }
 
 function limit_word($query, $word_limit = 5)
 {
-    $words = explode(' ', $query);
+    if ($query === null || $query === '') {
+        return '';
+    }
+    $words = explode(' ', (string)$query);
     return implode(' ', array_slice($words, 0, $word_limit));
 }
 
 function curent_url()
 {
-    if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on')
-        $url = "https://";
-    else
-        $url = "http://";
-    // Append the host(domain name, ip) to the URL.   
-    $url .= $_SERVER['HTTP_HOST'];
+    $https = isset($_SERVER['HTTPS']) && ($_SERVER['HTTPS'] === 'on' || $_SERVER['HTTPS'] === '1');
+    $url = $https ? "https://" : "http://";
+
+    // Append the host (domain name, ip) to the URL.   
+    $url .= $_SERVER['HTTP_HOST'] ?? 'localhost';
 
     // Append the requested resource location to the URL   
-    $url .= $_SERVER['REQUEST_URI'];
+    $url .= $_SERVER['REQUEST_URI'] ?? '/';
 
     return $url;
 }
@@ -168,13 +172,18 @@ function histats_code()
     $histats .= "})();</script>";
     $histats .= "<noscript><a href='/' target='_blank'><img  src='//sstatic1.histats.com/0.gif?" . HISTATS_ID . "&101' alt='' border='0'></a></noscript>";
     return $histats;
-    // <!-- Histats.com  END  -->`;
+    // <!-- Histats.com  END  -->
 }
 
 function cache_expire($file, $expire = 86400)
 {
-    $range    = strtotime(date('Y-m-d G:i:s')) - filemtime($file);
-    if ($range >= $expire) {
+    if (!file_exists($file)) {
         return true;
     }
+    $mtime = filemtime($file);
+    if ($mtime === false) {
+        return true;
+    }
+    $range = time() - $mtime;
+    return ($range >= $expire);
 }

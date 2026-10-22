@@ -1,5 +1,6 @@
 <?php
 
+#[\AllowDynamicProperties]
 class LoginController extends Controller
 {
     function __construct()
@@ -14,18 +15,21 @@ class LoginController extends Controller
 
     public function check()
     {
-        $username = $this->validate($_POST['username']);
-        $password = md5($this->validate($_POST['password']));
+        $rawUsername = $_POST['username'] ?? '';
+        $rawPassword = $_POST['password'] ?? '';
+
+        $username = $this->validate($rawUsername);
+        $password = md5($this->validate($rawPassword));
 
         $query = $this->admin->selectWhere(array('username' => $username, 'password' => $password));
 
         $data = $this->admin->getResult($query);
         $jml = $this->admin->getRows($query);
 
-        if ($jml > 0) {
-            $data = $data[0];
-            $_SESSION['username'] = $data['username'];
-            $_SESSION['password'] = $data['password'];
+        if ($jml > 0 && !empty($data[0])) {
+            $user = $data[0];
+            $_SESSION['username'] = $user['username'];
+            $_SESSION['password'] = $user['password'];
 
             $this->redirect('admin');
         } else {
