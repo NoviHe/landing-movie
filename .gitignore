@@ -1,20 +1,19 @@
-/public/public
-
-/public/cache/genre/*.json
-/public/cache/home/*.json
-/public/cache/movie/*.json
-/public/cache/search/*.json
-/public/cache/sigle/*.json
-/public/cache/tv/*.json
+# Temporary & Log files
+/tmp/log/*
+!/tmp/log/.gitkeep
+*.log
+/error_log
 /public/error_log
 
+# Cache files
+/public/cache/*
+!/public/cache/.gitkeep
+/public/public/
+/cache/
 
-/cache/genre/*.json
-/cache/home/*.json
-/cache/movie/*.json
-/cache/search/*.json
-/cache/sigle/*.json
-/cache/tv/*.json
-/error_log
-
-/tmp/log/error.log
+# OS and Editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp

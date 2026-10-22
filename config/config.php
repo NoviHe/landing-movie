@@ -8,7 +8,11 @@ define('DEVELOPMENT_ENVIRONMENT', false);
 define('BASE_PATH', 'https://nvireview.com');
 define('URL_WEBSITE', 'https://nvireview.com');
 $docRoot = !empty($_SERVER['DOCUMENT_ROOT']) ? $_SERVER['DOCUMENT_ROOT'] : (defined('ROOT') ? ROOT : dirname(__DIR__));
-define('DOCUMENT_ROOT', rtrim($docRoot, '/\\') . '/public');
+$docRoot = rtrim(str_replace('\\', '/', $docRoot), '/');
+if (substr($docRoot, -7) !== '/public' && basename($docRoot) !== 'public') {
+    $docRoot .= '/public';
+}
+define('DOCUMENT_ROOT', $docRoot);
 
 define('DEFAULT_CONTROLLER', 'home');
 define('SITES_URL', $_SERVER['HTTP_HOST'] ?? 'nvireview.com');
